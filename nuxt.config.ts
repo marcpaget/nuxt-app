@@ -10,4 +10,7 @@ css: ["@/assets/css/tailwind.css"],
   },
 components: true,
 buildModules: [],
+plugins: [
+'~/plugins/getbeer.server.js'
+],
 })
