@@ -1,6 +1,7 @@
 <template>
   <div>
     <!-- This page correctly has only one single root element -->
-    <div class="font-permanentmarker text-kaldi">The Coldest Sunset</div>
+    <h1 class="font-permanentmarker text-kaldi">The Coldest Sunset</h1>
+    
   </div>
 </template>

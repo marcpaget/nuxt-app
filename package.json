@@ -15,6 +15,7 @@
     "tailwindcss": "^3.0.24"
   },
   "dependencies": {
+    "@nuxt/content": "^1.15.1",
     "nuxt-buefy": "^0.4.22",
     "tw-elements": "^1.0.0-alpha12"
   }

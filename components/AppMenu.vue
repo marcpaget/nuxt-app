@@ -36,17 +36,17 @@
           <nuxt-link class="nav-link text-white" to="/about">About</nuxt-link>
         </li>
         <li class="nav-item p-2">
-          <a
+          <nuxt-link
             class="nav-link text-white opacity-60 hover:opacity-80 focus:opacity-80 p-0"
-            href="#"
-            >Team</a
+            to="/content/home.md"
+            >Content Home</nuxt-link
           >
         </li>
         <li class="nav-item p-2">
-          <a
+          <nuxt-link
             class="nav-link text-white opacity-60 hover:opacity-80 focus:opacity-80 p-0"
-            href="#"
-            >Projects</a
+            to="/content/articles/article-1.md"
+            >Article 1</nuxt-link
           >
         </li>
       </ul>
