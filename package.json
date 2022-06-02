@@ -8,6 +8,8 @@
   },
   "devDependencies": {
     "@nuxt/content": "^2.0.0",
+    "@nuxtjs/prismic": "^3.0.0-alpha.5",
+    "@nuxtjs/supabase": "^0.1.14",
     "@nuxtjs/tailwindcss": "5.0.4",
     "autoprefixer": "10.4.7",
     "nuxt": "npm:nuxt3@latest",
@@ -26,7 +28,9 @@
     "@tailwindcss/forms": "0.5.1",
     "@tailwindcss/line-clamp": "0.4.0",
     "@tailwindcss/typography": "0.5.2",
+    "flowbite": "^1.4.7",
     "pinia": "2.0.14",
+    "prisma": "^3.14.0",
     "tw-elements": "^1.0.0-alpha12"
   },
   "engines": {

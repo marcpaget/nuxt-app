@@ -1,3 +1,13 @@
+# Nuxt3 styled using TailwindCSS, Headless UI, HeroIcons
+
+## Plug-ins:
+Prismic 
+Content V2
+Tailwind CSS
+SplideJS
+
+
+
 # Nuxt 3 Minimal Starter
 
 Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
