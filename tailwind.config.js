@@ -14,7 +14,6 @@ module.exports = {
     "./node_modules/tw-elements/dist/js/**/*.js",
     "./src/**/*.{html,js}",
     "./content/**/**.md",
-    "./node_modules/flowbite/**/*.js",
     './formkit.config.{js,mjs,ts}'
   ],
   theme: {
@@ -40,7 +39,6 @@ module.exports = {
     require("@tailwindcss/line-clamp"),
     require("@tailwindcss/aspect-ratio"),
     require("tw-elements/dist/plugin"),
-    require('flowbite/plugin'),
     require("daisyui"),
     formKitTailwind,
   ],

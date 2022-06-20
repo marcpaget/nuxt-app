@@ -40,7 +40,6 @@
     "@tailwindcss/line-clamp": "0.4.0",
     "@tailwindcss/typography": "0.5.2",
     "daisyui": "^2.15.4",
-    "flowbite": "^1.4.7",
     "pinia": "2.0.14",
     "prisma": "^3.15.0",
     "swiper": "^8.2.2",
