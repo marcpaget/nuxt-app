@@ -36,18 +36,24 @@
           <nuxt-link class="nav-link text-white" to="/about">About</nuxt-link>
         </li>
         <li class="nav-item p-2">
-          <a
-            class="nav-link text-white opacity-60 hover:opacity-80 focus:opacity-80 p-0"
-            href="#"
-            >Team</a
-          >
+          <nuxt-link class="nav-link text-white opacity-60 hover:opacity-80 focus:opacity-80 p-0" to="/weather"
+            >Weather</nuxt-link>
         </li>
         <li class="nav-item p-2">
-          <a
-            class="nav-link text-white opacity-60 hover:opacity-80 focus:opacity-80 p-0"
-            href="#"
-            >Projects</a
-          >
+          <nuxt-link class="nav-link text-white opacity-60 hover:opacity-80 focus:opacity-80 p-0" to="/gallery"
+            >Gallery</nuxt-link>
+        </li>
+         <li class="nav-item p-2">
+          <nuxt-link class="nav-link text-white opacity-60 hover:opacity-80 focus:opacity-80 p-0" to="/form"
+            >Form</nuxt-link>
+        </li>
+         <li class="nav-item p-2">
+          <nuxt-link class="nav-link text-white opacity-60 hover:opacity-80 focus:opacity-80 p-0" to="/calculator"
+            >Calculator</nuxt-link>
+        </li>
+         <li class="nav-item p-2">
+          <nuxt-link class="nav-link text-white opacity-60 hover:opacity-80 focus:opacity-80 p-0" to="/supabasetest"
+            >Supabasetest</nuxt-link>
         </li>
       </ul>
       <!-- Left links -->

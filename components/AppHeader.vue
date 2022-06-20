@@ -27,7 +27,7 @@ export default {
   padding: 40px;
   overflow: hidden;
   background-size: cover !important;
-  background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 57%, rgba(0,0,0,0.65) 100%), url(assets/css/IMG_0765.jpeg) no-repeat center center scroll;
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 57%, rgba(0,0,0,0.65) 100%), url(assets/images/IMG_0765.jpeg) no-repeat center center scroll;
 }
 
 h1 {

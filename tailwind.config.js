@@ -1,4 +1,6 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
+const formKitTailwind = require('@formkit/themes/tailwindcss');
+
 
 module.exports = {
   content: [
@@ -12,7 +14,8 @@ module.exports = {
     "./node_modules/tw-elements/dist/js/**/*.js",
     "./src/**/*.{html,js}",
     "./content/**/**.md",
-    "./node_modules/flowbite/**/*.js"
+    "./node_modules/flowbite/**/*.js",
+    './formkit.config.{js,mjs,ts}'
   ],
   theme: {
     extend: {
@@ -38,5 +41,7 @@ module.exports = {
     require("@tailwindcss/aspect-ratio"),
     require("tw-elements/dist/plugin"),
     require('flowbite/plugin'),
+    require("daisyui"),
+    formKitTailwind,
   ],
 };

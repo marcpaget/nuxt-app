@@ -5,6 +5,9 @@ export default defineNuxtConfig({
   build: {
     transpile: ['@heroicons/vue'],
   },
+  css: [
+    '@/assets/css/tailwind.css',
+  ],
 postcss: {
   plugins: {
     tailwindcss: {},
@@ -16,16 +19,24 @@ plugins: [],
 modules: [
   '@nuxt/content',
   '@nuxtjs/tailwindcss',
+  '@formkit/nuxt',
+  '@nuxtjs/prismic',
+  '@vueuse/nuxt',
+  '@nuxtjs/supabase',
 ],
+prismic: {
+  endpoint: 'marcsnuxt'
+},
 buildModules: [
   // pinia plugin - https://pinia.esm.dev
-  "@pinia/nuxt",
+  '@pinia/nuxt',
+  'unplugin-icons/nuxt',
 ],
 vite: {
   logLevel: "info",
   optimizeDeps: {
       include: [
-          '@headlessui/vue', '@heroicons/vue/solid', '@heroicons/vue/outline', 'vue', 'pinia', 'ufo'
+          '@headlessui/vue', '@heroicons/vue/solid', '@heroicons/vue/outline', 'vue', 'pinia', 'ufo',
       ]
   }
 }
