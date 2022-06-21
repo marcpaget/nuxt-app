@@ -9,12 +9,17 @@ restaurantsResponse.value = await supabase.from("restaurants").select();
 </script>
 
 <template>
+<div v-if="restaurantsResponse.data">
     <div v-for="restaurants in restaurantsResponse.data" :key="restaurants.id">
-        <h3>
-            {{ restaurants.name }}
-        </h3>
-          <h3>
-            {{ restaurants.location }}
-        </h3>
+        <div class="card w-96 bg-primary text-primary-content">
+  <div class="card-body">
+    <h2 class="card-title">{{ restaurants.name }}</h2>
+    <p>{{ restaurants.location }}</p>
+    <div class="card-actions justify-end">
+      <button class="btn">Buy Now</button>
     </div>
+  </div>
+</div>
+    </div>
+</div>
 </template>

@@ -55,6 +55,10 @@
           <nuxt-link class="nav-link text-white opacity-60 hover:opacity-80 focus:opacity-80 p-0" to="/supabasetest"
             >Supabasetest</nuxt-link>
         </li>
+         <li class="nav-item p-2">
+          <nuxt-link class="nav-link text-white opacity-60 hover:opacity-80 focus:opacity-80 p-0" to="/storagetest"
+            >Storagetest</nuxt-link>
+        </li>
       </ul>
       <!-- Left links -->
     </div>
