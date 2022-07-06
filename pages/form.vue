@@ -8,18 +8,16 @@ const inputOptions = {
 </script>
 
 <template>
+<section v-show="step === 'contactInfo'">
   <FormKit
-    v-for="type in inputTypes"
-    :key="type"
-    :label="`This is a ${type} input`"
-    :type="type"
-    :placeholder="`${type} input placeholder`"
-    :options="inputOptions[type] ? inputOptions[type] : null"
-    :help="`Help text for the ${type} input`"
-    :multiple="type === 'file'"
-    :disabled="type === 'date' ? true : undefined"
-    :validation="type === 'email' ? 'required|email' : 'required'"
-    :validation-visibility="type === 'email' ? 'live' : 'blur'"
-    :validation-label="type"
-  />
+    type="group"
+    name="contactInfo"
+  >
+    <FormKit
+      type="email"
+      label="*Email address"
+      validation="required|email"
+    />
+  </FormKit>
+</section>
 </template>
