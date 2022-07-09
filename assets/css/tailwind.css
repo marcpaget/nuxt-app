@@ -14,5 +14,17 @@
     .carddiv {
        background-color: theme('colors.black');
     }
+    .body {
+      
+    }
+    ::-webkit-scrollbar {
+      width: 40px;
+    }
+  ::-webkit-scrollbar-track {
+    background: #dddddd;
+  }    
+  ::-webkit-scrollbar-thumb {
+    background: #1D3557;
+  }
     /* ... */
   }
