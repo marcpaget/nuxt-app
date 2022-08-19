@@ -5,6 +5,9 @@ export default defineNuxtConfig({
   build: {
     transpile: ['@heroicons/vue'],
   },
+  content: {
+    documentDriven: true
+  },
   css: [
     '@/assets/css/tailwind.css',
   ],
@@ -23,6 +26,7 @@ modules: [
   '@nuxtjs/prismic',
   '@vueuse/nuxt',
   '@nuxtjs/supabase',
+  '@nuxt/image-edge',
   //'@inkline/nuxt',
 ], /*
 inkline: {
@@ -36,6 +40,11 @@ buildModules: [
  // '@pinia/nuxt',
   'unplugin-icons/nuxt',
 ],
+nitro: {
+  prerender: {
+    routes: ['/sitemap.xml']
+  }
+},
 vite: {
   logLevel: "info",
   optimizeDeps: {
