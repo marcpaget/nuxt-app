@@ -27,6 +27,7 @@ modules: [
   '@vueuse/nuxt',
   '@nuxtjs/supabase',
   '@nuxt/image-edge',
+  'vue-plausible',
   //'@inkline/nuxt',
 ], /*
 inkline: {
@@ -35,10 +36,20 @@ inkline: {
 prismic: {
   endpoint: 'marcsnuxt'
 },
+plausible: {
+  domain: process.env.PLAUSIBLE_DOMAIN
+},
+publicRuntimeConfig: {
+  plausible: {
+    domain: process.env.PLAUSIBLE_DOMAIN,
+    apiHost: process.env.PLAUSIBLE_API_HOST
+  }
+},
 buildModules: [
   // pinia plugin - https://pinia.esm.dev
  // '@pinia/nuxt',
   'unplugin-icons/nuxt',
+  'vue-plausible'
 ],
 nitro: {
   prerender: {
