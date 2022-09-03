@@ -28,11 +28,23 @@ modules: [
   '@nuxtjs/supabase',
   '@nuxt/image-edge',
   'vue-plausible',
+  '@nuxtjs/algolia',
+  'nuxt-meilisearch',
   //'@inkline/nuxt',
 ], /*
 inkline: {
   // Plugin options (optional)
 }, */
+meilisearch: {
+  hostUrl: '<YOUR_MEILISEARCH_HOST_URL>',
+  apiKey: '<YOUR_MEILISEARCH_API_KEY>',
+  instantSearch: {
+    theme: 'algolia'
+  },
+algolia: {
+  apiKey: process.env.ALGOLIA_API_KEY,
+  applicationId: process.env.ALGOLIA_APP_ID,
+},
 prismic: {
   endpoint: 'marcsnuxt'
 },

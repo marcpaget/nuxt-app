@@ -25,7 +25,8 @@ const { publicURL, error } = await supabase
             Hej
         </h1>
         <h3>
-            {{ publicURL }}
+            {{ publicURL.string }}
         </h3>  
-    </div>
+        <img :src="publicURL.data" alt="image" />
+        </div>
 </template>
