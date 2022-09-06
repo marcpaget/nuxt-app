@@ -12,13 +12,16 @@
     "@nuxt/content": "npm:@nuxt/content-edge@latest",
     "@nuxt/image": "^0.6.2",
     "@nuxt/image-edge": "^1.0.0-27657146.da85542",
+    "@nuxtjs/color-mode": "^3.1.4",
     "@nuxtjs/prismic": "^3.0.0-alpha.5",
     "@nuxtjs/supabase": "^0.1.17",
     "@nuxtjs/tailwindcss": "5.0.4",
     "@vueuse/core": "^8.6.0",
     "@vueuse/nuxt": "^8.6.0",
     "autoprefixer": "10.4.7",
+    "material-design-icons-iconfont": "^6.7.0",
     "nuxt": "npm:nuxt3@latest",
+    "nuxt-icon": "^0.1.5",
     "nuxt-meilisearch": "^0.1.1",
     "postcss-custom-properties": "12.1.7",
     "sass": "^1.53.0",
@@ -45,6 +48,7 @@
     "@tailwindcss/forms": "0.5.1",
     "@tailwindcss/line-clamp": "0.4.0",
     "@tailwindcss/typography": "0.5.2",
+    "@vuestic/nuxt": "^1.0.5",
     "daisyui": "^2.15.4",
     "pinia": "2.0.14",
     "prisma": "^3.15.0",
@@ -55,5 +59,6 @@
   "engines": {
     "node": "^16.11.0 || ^17.0.0 || || ^18.0.0"
   },
-  "packageManager": "yarn@3.2.0"
+  "packageManager": "yarn@3.2.0",
+  "version": "0.0.0"
 }
