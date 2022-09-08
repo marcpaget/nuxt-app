@@ -2,6 +2,7 @@
 <div>
   <div class="content">
       <AppMenu />
+      <AppMenuDaisy />
       <slot />
   </div>
   <AppFooter />
@@ -9,10 +10,11 @@
 </template>
 
 <script>
-import AppMenu from '~~/components/AppMenu.vue'
+import AppMenu from '~~/components/AppMenuDaisy.vue'
 import AppFooter from '~~/components/AppFooter.vue'
+import AppMenuDaisy from '~~/components/AppMenuDaisy.vue'
 export default {
-  components: { AppMenu, AppFooter },
+  components: { AppMenu, AppFooter, AppMenuDaisy },
 
 }
 </script>

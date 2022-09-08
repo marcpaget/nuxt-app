@@ -30,6 +30,10 @@ modules: [
   'vue-plausible',
   '@nuxtjs/algolia',
   'nuxt-meilisearch',
+  '@vuestic/nuxt',
+  '@nuxtjs/color-mode',
+  'nuxt-icon',
+  'unplugin-icons/nuxt',
   //'@inkline/nuxt',
 ], /*
 inkline: {
@@ -40,7 +44,8 @@ meilisearch: {
   apiKey: '<YOUR_MEILISEARCH_API_KEY>',
   instantSearch: {
     theme: 'algolia'
-  },
+  }
+},
 algolia: {
   apiKey: process.env.ALGOLIA_API_KEY,
   applicationId: process.env.ALGOLIA_APP_ID,
@@ -51,11 +56,15 @@ prismic: {
 plausible: {
   domain: process.env.PLAUSIBLE_DOMAIN
 },
-publicRuntimeConfig: {
+runtimeConfig: {
+  public: {
+    SUPABASE_URL: process.env.SUPABASE_URL,
+    SUPABASE_KEY: process.env.SUPABASE_KEY,
+  },
   plausible: {
     domain: process.env.PLAUSIBLE_DOMAIN,
-    apiHost: process.env.PLAUSIBLE_API_HOST
-  }
+    apiHost: process.env.PLAUSIBLE_API_HOST,
+  },
 },
 buildModules: [
   // pinia plugin - https://pinia.esm.dev

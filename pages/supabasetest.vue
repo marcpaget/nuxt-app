@@ -1,12 +1,12 @@
 <script setup lang="ts">
-//const client = useSupabaseClient()
-//const { data: restaurant } = await useAsyncData('restaurant', async () => {const { data } = await client.from('restaurants').select('name, location').eq('name, Marcsjoint').single()
-//return data
-//})
-const {supabase} = useSupabase();
-const restaurantsResponse = ref();
-restaurantsResponse.value = await supabase.from("restaurants").select();
-</script>
+  //const client = useSupabaseClient()
+  //const { data: restaurant } = await useAsyncData('restaurant', async () => {const { data } = await client.from('restaurants').select('name, location').eq('name, Marcsjoint').single()
+  //return data
+  //})
+  const {supabase} = useSupabase();
+  const restaurantsResponse = ref();
+  restaurantsResponse.value = await supabase.from("restaurants").select();
+  </script>
 
 <template>
 <div v-if="restaurantsResponse.data">
