@@ -8488,7 +8488,7 @@ nuxt-meilisearch@^0.1.1:
     meilisearch "0.27.0"
     vue-instantsearch "4.4.0"
 
-nuxt@^3.0.0-rc.9:
+nuxt@3.0.0-rc.9, nuxt@^3.0.0-rc.9:
   version "3.0.0-rc.9"
   resolved "https://registry.yarnpkg.com/nuxt/-/nuxt-3.0.0-rc.9.tgz#a3bcceaffcab917b09238e3db45e73b646516ed4"
   integrity sha512-fXaqm+Vha/p+MztueluJdEc9hqj6gwjFeuCgOBwIYnV+3nFbHu3EAro8QbPcoYZaj5oot+qY7YuyGczBvlNZuQ==
