@@ -1,3 +1,4 @@
+<!--
 <template>
   <swiper
     :modules="modules"
@@ -49,4 +50,4 @@
     },
   };
 </script>
-
+->
