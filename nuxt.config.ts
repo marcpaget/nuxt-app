@@ -34,6 +34,7 @@ modules: [
   '@nuxtjs/color-mode',
   'nuxt-icon',
   'unplugin-icons/nuxt',
+  '@nuxtjs/partytown',
   //'@inkline/nuxt',
 ], /*
 inkline: {
