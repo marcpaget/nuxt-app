@@ -1,7 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+    .customcard {
+      background-color: theme('colors.white');
+      border-radius: theme('borderRadius.lg');
+      padding: theme('spacing.6');
+      box-shadow: theme('boxShadow.xl');
+    }
+    .carddiv {
+       background-color: theme('colors.black');
+    }
+    .body {
+      
+    }
+    ::-webkit-scrollbar {
+      width: 20px;
+    }
+  ::-webkit-scrollbar-track {
+    background: #dddddd;
+  }    
+  ::-webkit-scrollbar-thumb {
+    background: #1D3557;
+  }
+    /* ... */
+  }

@@ -1,19 +1,27 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+const formKitTailwind = require('@formkit/themes/tailwindcss');
+
+
 module.exports = {
-  mode: "jit",
-  purge: [
-    "./assets/**/*.{css}",
-    "./components/*.{vue,js}",
-    "./components/**/*.{vue,js}",
-    "./pages/*.vue",
+  content: [
+    "./components/**/*.{js,vue,ts}",
+    "./layouts/**/*.vue",
     "./pages/**/*.vue",
     "./plugins/**/*.{js,ts}",
-    "./*.{vue,js,ts}",
+    "./app.vue",
+    "./assets/**/*.scss",
+    "./assets/**/*.css",
+    "./node_modules/tw-elements/dist/js/**/*.js",
+    "./src/**/*.{html,js}",
+    "./content/**/**.md",
+    './formkit.config.{js,mjs,ts}'
   ],
   theme: {
     extend: {
-      fontFamily: { 
-        permanentmarker: ['Permanent Marker', 'cursive']
-        },
+      fontFamily: {
+        sans: ['"Inter var"', ...defaultTheme.fontFamily.sans],
+        permanentmarker: ['Permanent Marker', 'cursive'],
+      },
       colors: {
         'kaldi': '#ff0000',
       },
@@ -22,7 +30,16 @@ module.exports = {
       }
     },
   },
-  content: ['./src/**/*.{html,js}', './node_modules/tw-elements/dist/js/**/*.js'],
-  plugins: [require('tw-elements/dist/plugin')],
-}
-
+  variants: {
+    extend: {},
+  },
+  plugins: [
+    require("@tailwindcss/forms"),
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/line-clamp"),
+    require("@tailwindcss/aspect-ratio"),
+    require("tw-elements/dist/plugin"),
+    require("daisyui"),
+    formKitTailwind,
+  ],
+};
