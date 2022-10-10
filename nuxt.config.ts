@@ -5,6 +5,14 @@ export default defineNuxtConfig({
   build: {
     transpile: ['@heroicons/vue'],
   },
+  pageTransition: {
+    name: 'fade',
+    mode: 'out-in' // default
+  },
+  layoutTransition: {
+    name: 'slide',
+    mode: 'out-in' // default
+  },  
   content: {
     documentDriven: true
   },
