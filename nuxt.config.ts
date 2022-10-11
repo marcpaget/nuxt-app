@@ -48,6 +48,12 @@ modules: [
 inkline: {
   // Plugin options (optional)
 }, */
+image: {
+  cloudinary:{
+    baseURL: 'https://res.cloudinary.com/selfhostingninja/image/upload/'
+  },
+  domains:['selfhosting.ninja'],
+},
 meilisearch: {
   hostUrl: '<YOUR_MEILISEARCH_HOST_URL>',
   apiKey: '<YOUR_MEILISEARCH_API_KEY>',
