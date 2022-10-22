@@ -35,7 +35,7 @@ modules: [
   '@nuxt/content',
   '@nuxtjs/tailwindcss',
   '@formkit/nuxt',
-  '@nuxtjs/prismic',
+ // '@nuxtjs/prismic',
   '@vueuse/nuxt',
   '@nuxtjs/supabase',
   '@nuxt/image-edge',
@@ -79,9 +79,11 @@ meilisearch: {
 //   apiKey: process.env.ALGOLIA_API_KEY,
 //   applicationId: process.env.ALGOLIA_APP_ID,
 // },
+/*
 prismic: {
   endpoint: 'marcsnuxt'
 },
+*/
 plausible: {
   domain: process.env.PLAUSIBLE_DOMAIN
 },
@@ -101,6 +103,9 @@ buildModules: [
   'unplugin-icons/nuxt',
   'vue-plausible'
 ],
+tailwindcss: {
+viewer: true,
+},
 nitro: {
   prerender: {
     routes: ['/sitemap.xml']
