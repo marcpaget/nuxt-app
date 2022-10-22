@@ -21,7 +21,7 @@
     "@vueuse/nuxt": "^8.6.0",
     "autoprefixer": "10.4.7",
     "material-design-icons-iconfont": "^6.7.0",
-    "nuxt": "3.0.0-rc.9",
+    "nuxt": "^3.0.0-rc.12",
     "nuxt-api-party": "^0.1.8",
     "nuxt-icon": "^0.1.5",
     "nuxt-meilisearch": "^0.1.1",

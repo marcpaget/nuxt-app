@@ -3,7 +3,7 @@
    <NuxtLayout>
     <NuxtLoadingIndicator />
       <NuxtPage :transition="{
-        name: 'slide-right',
+        name: 'bounce',
         mode: 'out-in'
       }" />
   </NuxtLayout>
