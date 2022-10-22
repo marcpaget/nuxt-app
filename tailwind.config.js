@@ -40,6 +40,7 @@ module.exports = {
     require("@tailwindcss/aspect-ratio"),
     require("tw-elements/dist/plugin"),
     require("daisyui"),
+    require("tailwind-scrollbar"),
     formKitTailwind,
   ],
 };

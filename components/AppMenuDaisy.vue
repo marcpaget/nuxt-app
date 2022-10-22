@@ -19,6 +19,7 @@
           <li><nuxt-link to="/weather">Weather</nuxt-link></li>
           <li><nuxt-link to="/gallery">Gallery</nuxt-link></li>
           <li><nuxt-link to="/form">Form</nuxt-link></li>
+          <li><nuxt-link to="/text">Text</nuxt-link></li>
           </ul>
         </li>
         <li><nuxt-link to="/about">About</nuxt-link></li>
@@ -44,6 +45,7 @@
           <li><nuxt-link to="/weather">Weather</nuxt-link></li>
           <li><nuxt-link to="/gallery">Gallery</nuxt-link></li>
           <li><nuxt-link to="/form">Form</nuxt-link></li>
+          <li><nuxt-link to="/text">Text</nuxt-link></li>
         </ul>
       </li>
       <li><nuxt-link to="/about">About</nuxt-link></li>
@@ -56,7 +58,7 @@
   </div>
   <div class="navbar-end">
   <li>
-    <button v-if="user" @click="client.auth.signOut()" class="btn">Log out</button>
+    <button v-if="user" @click="doSignOut" class="btn">Log out</button>
     <button v-else class="btn"><nuxt-link to="/login">Log in</nuxt-link></button>
   </li>
   </div>
@@ -66,6 +68,12 @@
 <script setup lang="ts">
 const user = useSupabaseUser()
 const client = useSupabaseClient()
+const router = useRouter();
+
+const doSignOut = async () => {
+  await client.auth.signOut();
+  router.replace("/login");
+}
 </script>
 
 <style>

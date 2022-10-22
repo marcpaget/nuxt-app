@@ -12,11 +12,6 @@ const signUp = async () => {
   const { user, error } = await client.auth.signUp({
     email: email.value,
     password: password.value,
-    options: {
-      data: { 
-        first_name: first_name.value,
-      }
-    }
   })
   console.log('user', user)
   console.log('error', error)
@@ -46,12 +41,14 @@ onMounted(() => {
     <form @submit.prevent="() => (isSignUp ? signUp() : login())"
       class="flex flex-col gap-2 justify-center items-center"
     >
+    <!--
     <input v-if="isSignUp"
         type="text"
         placeholder="First Name"
         v-model="text"
         class="p-2 bg-gray-600 rounded"
         />
+    -->
       <input
         type="email"
         placeholder="Email"

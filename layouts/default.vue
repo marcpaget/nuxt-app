@@ -1,6 +1,7 @@
 <template>
   <div class="content">
       <AppMenuDaisy />
+      <div class="scrollbar-thin scrollbar-thumb-blue-700 scrollbar-track-blue-300"></div>
       <slot />
   <AppFooter />
 </div>

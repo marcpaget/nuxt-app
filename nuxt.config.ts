@@ -13,6 +13,10 @@ export default defineNuxtConfig({
     name: 'slide',
     mode: 'out-in' // default
   },  
+  apiParty: { // https://github.com/johannschopplich/nuxt-api-party#readme
+    // Needed for the names of the composables
+    name: 'json-placeholder'
+  },
   content: {
     documentDriven: true
   },
@@ -44,10 +48,20 @@ modules: [
   'unplugin-icons/nuxt',
   '@nuxtjs/partytown',
   //'@inkline/nuxt',
+  'nuxt-api-party',
+  'nuxt-umami',
 ], /*
 inkline: {
   // Plugin options (optional)
 }, */
+umami: {
+  autoTrack: true,
+  doNotTrack: false,
+  cache: false,
+  domains: 'selfhosting.ninja',
+  websiteId: 'bc3253eb-d82d-49dd-a290-d337841dce29',
+  scriptUrl: 'https://marcs-umami-analytics.herokuapp.com/umami.js',
+},
 image: {
   cloudinary:{
     baseURL: 'https://res.cloudinary.com/selfhostingninja/image/upload/'
