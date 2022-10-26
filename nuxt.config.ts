@@ -1,5 +1,3 @@
-import { defineNuxtConfig } from 'nuxt'
-
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   build: {
@@ -20,7 +18,7 @@ export default defineNuxtConfig({
   content: {
     documentDriven: true
   },
-  css: [
+ /* css: [
     '@/assets/css/tailwind.css',
   ],
 postcss: {
@@ -28,7 +26,7 @@ postcss: {
     tailwindcss: {},
     autoprefixer: {},
   },
-  },
+  }, */
 components: true,
 plugins: [],
 modules: [
@@ -104,7 +102,12 @@ buildModules: [
   'vue-plausible'
 ],
 tailwindcss: {
-viewer: true,
+  cssPath: '~/assets/css/tailwind.css',
+  configPath: 'tailwind.config',
+  exposeConfig: false,
+  config: {},
+  injectPosition: 0,
+  viewer: true,
 },
 nitro: {
   prerender: {
