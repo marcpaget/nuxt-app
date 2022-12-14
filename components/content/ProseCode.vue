@@ -13,7 +13,7 @@
     <slot />
     <div class="bottom-container">
       <div class="copy-container">
-        <span class="copied-text" v-if="copied">Copied code!</span>
+        <span v-if="copied" class="copied-text">Copied code!</span>
         <button @click="copy(code)">Copy Code</button>
       </div>
     </div>
@@ -21,19 +21,19 @@
 </template>
 
 <script setup lang="ts">
-import { useClipboard } from '@vueuse/core';
+import { useClipboard } from '@vueuse/core'
 
-const { copy, copied, text } = useClipboard();
+const { copy, copied, text } = useClipboard()
 
 const props = withDefaults(
   defineProps<{
-    code?: string;
-    language?: string | null;
-    filename?: string | null;
-    highlights?: Array<number>;
+    code?: string
+    language?: string | null
+    filename?: string | null
+    highlights?: Array<number>
   }>(),
   { code: '', language: null, filename: null, highlights: [] }
-);
+)
 
 const languageMap: Record<
   string,
@@ -49,17 +49,17 @@ const languageMap: Record<
     background: '#f7df1e',
     color: 'black',
   },
-};
+}
 
 const languageText = computed(() =>
   props.language ? languageMap[props.language]?.text : null
-);
+)
 const languageBackground = computed(() =>
   props.language ? languageMap[props.language]?.background : null
-);
+)
 const languageColor = computed(() =>
   props.language ? languageMap[props.language]?.color : null
-);
+)
 </script>
 
 <style scoped>
@@ -80,7 +80,7 @@ const languageColor = computed(() =>
 
 .copy-container {
   display: flex;
-  background: #fff3f3
+  background: #fff3f3;
 }
 
 .copied-text {

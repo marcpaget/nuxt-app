@@ -1,12 +1,12 @@
 <template>
-<div>
-  <div class="content">
+  <div>
+    <div class="content">
       <AppMenu />
       <AppMenuDaisy />
       <slot />
+    </div>
+    <AppFooter />
   </div>
-  <AppFooter />
-</div>
 </template>
 
 <script>
@@ -15,10 +15,7 @@ import AppFooter from '~~/components/AppFooter.vue'
 import AppMenuDaisy from '~~/components/AppMenuDaisy.vue'
 export default {
   components: { AppMenu, AppFooter, AppMenuDaisy },
-
 }
 </script>
 
-<style>
-
-</style>
+<style></style>

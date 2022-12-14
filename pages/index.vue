@@ -1,9 +1,8 @@
 <template>
   <div>
-      <AppHeader />
+    <AppHeader />
   </div>
 </template>
-
 
 <script>
 // import {AppHeader} from "~~/components/AppHeader.vue"
@@ -16,9 +15,6 @@
 definePageMeta({
   middleware: ['auth'],
 })
-
 </script>
 
-<style>
-
-</style>
+<style></style>

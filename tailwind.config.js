@@ -1,20 +1,20 @@
-const defaultTheme = require("tailwindcss/defaultTheme");
-const formKitTailwind = require('@formkit/themes/tailwindcss');
+/* eslint-disable @typescript-eslint/no-var-requires */
+const defaultTheme = require('tailwindcss/defaultTheme')
+const formKitTailwind = require('@formkit/themes/tailwindcss')
 
-
-module.exports = {
+export default {
   content: [
-    "./components/**/*.{js,vue,ts}",
-    "./layouts/**/*.vue",
-    "./pages/**/*.vue",
-    "./plugins/**/*.{js,ts}",
-    "./app.vue",
-    "./assets/**/*.scss",
-    "./assets/**/*.css",
-    "./node_modules/tw-elements/dist/js/**/*.js",
-    "./src/**/*.{html,js}",
-    "./content/**/**.md",
-    './formkit.config.{js,mjs,ts}'
+    './components/**/*.{js,vue,ts}',
+    './layouts/**/*.vue',
+    './pages/**/*.vue',
+    './plugins/**/*.{js,ts}',
+    './app.vue',
+    './assets/**/*.scss',
+    './assets/**/*.css',
+    './node_modules/tw-elements/dist/js/**/*.js',
+    './src/**/*.{html,js}',
+    './content/**/**.md',
+    './formkit.config.{js,mjs,ts}',
   ],
   theme: {
     extend: {
@@ -23,24 +23,25 @@ module.exports = {
         permanentmarker: ['Permanent Marker', 'cursive'],
       },
       colors: {
-        'kaldi': '#ff0000',
+        kaldi: '#ff0000',
       },
       textColor: {
-        'kaldi': '#ff0000',
-      }
+        kaldi: '#ff0000',
+      },
     },
   },
+  darkMode: 'class',
   variants: {
     extend: {},
   },
   plugins: [
-    require("@tailwindcss/forms"),
-    require("@tailwindcss/typography"),
-    require("@tailwindcss/line-clamp"),
-    require("@tailwindcss/aspect-ratio"),
-    require("tw-elements/dist/plugin"),
-    require("daisyui"),
-    require("tailwind-scrollbar"),
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/line-clamp'),
+    require('@tailwindcss/aspect-ratio'),
+    require('tw-elements/dist/plugin'),
+    require('daisyui'),
+    require('tailwind-scrollbar'),
     formKitTailwind,
   ],
-};
+}

@@ -1,18 +1,12 @@
 <template>
   <section class="masthead" role="img" aria-label="Image Description">
-  <h1>
-    Godt Nytår
-  </h1>
-    <button>
-      When a hero comes along
-    </button>
-</section>
+    <h1>Godt Nytår</h1>
+    <button>When a hero comes along</button>
+  </section>
 </template>
 
 <script>
-export default {
-
-}
+export default {}
 </script>
 
 <style lang="css" scoped>
@@ -27,7 +21,13 @@ export default {
   padding: 40px;
   overflow: hidden;
   background-size: cover !important;
-  background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 57%, rgba(0,0,0,0.65) 100%), url(assets/images/IMG_0765.jpeg) no-repeat center center scroll;
+  background: radial-gradient(
+      ellipse at center,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0) 57%,
+      rgba(0, 0, 0, 0.65) 100%
+    ),
+    url(assets/images/IMG_0765.jpeg) no-repeat center center scroll;
 }
 
 h1 {
@@ -40,11 +40,10 @@ h1 {
   text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8);
   margin-bottom: 63px;
 }
-    
-      
+
 button {
   background: #098191;
-  transition: background ease .25s;
+  transition: background ease 0.25s;
   border-radius: 19px;
   display: inline-block;
   border: none;
@@ -59,7 +58,7 @@ button {
   -moz-appearance: none;
 }
 button:hover {
-  background: #63b6b8
+  background: #63b6b8;
 }
 button:focus {
   outline: 1px solid #fff;

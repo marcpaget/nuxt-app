@@ -1,17 +1,11 @@
 <template>
   <div>
-   <NuxtLayout>
-    <NuxtLoadingIndicator />
-      <NuxtPage :transition="{
-        name: 'bounce',
-        mode: 'out-in'
-      }" />
-  </NuxtLayout>
+    <NuxtLayout>
+      <NuxtLoadingIndicator />
+      <NuxtPage />
+    </NuxtLayout>
   </div>
 </template>
-
-<script setup>
-</script>
 
 <style>
 .slide-left-enter-active,

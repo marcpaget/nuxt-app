@@ -1,4 +1,7 @@
 {
     "nuxt.isNuxtApp": false,
-    "explorer.compactFolders": false
+    "explorer.compactFolders": false,
+    "files.associations": {
+        "*.yaml": "home-assistant"
+    }
 }

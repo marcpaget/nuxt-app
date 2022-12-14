@@ -7,5 +7,7 @@
 			"path": "../../nextjs/bestdiy-next-js/nextjs-blog"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"nuxt.isNuxtApp": false
+	}
 }

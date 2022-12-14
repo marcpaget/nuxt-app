@@ -38,10 +38,11 @@ onMounted(() => {
 
 <template>
   <div>
-    <form @submit.prevent="() => (isSignUp ? signUp() : login())"
+    <form
       class="flex flex-col gap-2 justify-center items-center"
+      @submit.prevent="() => (isSignUp ? signUp() : login())"
     >
-    <!--
+      <!--
     <input v-if="isSignUp"
         type="text"
         placeholder="First Name"
@@ -50,15 +51,15 @@ onMounted(() => {
         />
     -->
       <input
+        v-model="email"
         type="email"
         placeholder="Email"
-        v-model="email"
         class="p-2 bg-gray-600 rounded"
       />
       <input
+        v-model="password"
         type="password"
         placeholder="Password"
-        v-model="password"
         class="p-2 bg-gray-600 rounded"
       />
       <button type="submit" class="p-2 text-white bg-green-500 rounded">
@@ -67,12 +68,11 @@ onMounted(() => {
       </button>
     </form>
     <button
-      @click="isSignUp = !isSignUp"
       class="w-full mt-8 text-sm text-center underline text-slate-300"
+      @click="isSignUp = !isSignUp"
     >
       <span v-if="isSignUp"> Have an account? Log in instead </span>
       <span v-else> Create a new account </span>
     </button>
   </div>
 </template>
-
