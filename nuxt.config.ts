@@ -1,9 +1,8 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
-import { defineNuxtConfig } from 'nuxt/config'
 export default defineNuxtConfig({
   app: {
     pageTransition: {
-      name: 'fade',
+      name: 'page',
       mode: 'out-in', // default
     },
     layoutTransition: {
@@ -14,6 +13,10 @@ export default defineNuxtConfig({
   content: {
     documentDriven: true,
   },
+  typescript: {
+    strict: true,
+    shim: false,
+  },
   modules: [
     '@nuxt/content',
     '@nuxtjs/tailwindcss',
@@ -22,7 +25,6 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@nuxtjs/supabase',
     '@nuxt/image-edge', //  '@nuxtjs/algolia',
-    'nuxt-meilisearch',
     '@vuestic/nuxt',
     '@nuxtjs/color-mode',
     'nuxt-icon',
@@ -46,6 +48,7 @@ export default defineNuxtConfig({
     scriptUrl: 'https://marcs-umami-analytics.herokuapp.com/umami.js',
   },
   image: {
+    provider: 'cloudinary',
     cloudinary: {
       baseURL: 'https://res.cloudinary.com/selfhostingninja/image/upload/',
     },
@@ -53,13 +56,6 @@ export default defineNuxtConfig({
   },
   colorMode: {
     classSuffix: '',
-  },
-  meilisearch: {
-    hostUrl: process.env.MEILISEARCH_HOST_URL,
-    apiKey: process.env.MEILISEARCH_API_KEY,
-    instantSearch: {
-      theme: 'algolia',
-    },
   },
   runtimeConfig: {
     public: {
@@ -71,7 +67,7 @@ export default defineNuxtConfig({
     cssPath: '~/assets/css/tailwind.css',
     configPath: 'tailwind.config.js',
     exposeConfig: false,
-    config: {},
+    //config: {},
     injectPosition: 0,
     viewer: true,
   },

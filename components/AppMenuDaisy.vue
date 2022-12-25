@@ -48,7 +48,7 @@
               <li><nuxt-link to="/text">Text</nuxt-link></li>
             </ul>
           </li>
-          <li><nuxt-link to="/about">About</nuxt-link></li>
+          <li><nuxt-link to="/aboutPage">About</nuxt-link></li>
         </ul>
       </div>
       <button class="btn btn-ghost normal-case text-xl">
