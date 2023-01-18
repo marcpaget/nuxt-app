@@ -1,11 +1,11 @@
 // Todo
 
-- Transitions
-- Animated gradient header/hero-text
-- Setup and configure ES-Lint, Prettier
-- Setup and configure Storybook
-- Setup and configure I18n Nuxt module
-- Setup and configure Nuxt PWA module
+-   Transitions
+-   Animated gradient header/hero-text
+-   Setup and configure ES-Lint, Prettier
+-   Setup and configure Storybook
+-   Setup and configure I18n Nuxt module
+-   Setup and configure Nuxt PWA module
 
 # Nuxt3 styled using TailwindCSS, Headless UI, HeroIcons
 
