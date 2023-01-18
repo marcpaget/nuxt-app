@@ -1,10 +1,10 @@
 <template>
-  <div>
-    <NuxtLayout>
-      <NuxtLoadingIndicator />
-      <NuxtPage />
-    </NuxtLayout>
-  </div>
+    <div class="scrollbar-thumb-blue-700">
+        <NuxtLayout>
+            <NuxtLoadingIndicator />
+            <NuxtPage />
+        </NuxtLayout>
+    </div>
 </template>
 
 <!------------------------------------------------------

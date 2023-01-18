@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <AppHeader />
-  </div>
+    <div>
+        <AppHeader />
+    </div>
 </template>
 
 <script>
@@ -13,7 +13,7 @@
 // }
 
 definePageMeta({
-  middleware: ['auth'],
+    middleware: ['auth'],
 })
 </script>
 

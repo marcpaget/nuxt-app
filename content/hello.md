@@ -2,10 +2,14 @@
 title: 'Ti'
 description: 'meta description of the page'
 ---
+
 <!-- Content of the page -->
+
 ## Hej med dig
+
 Din slyngel
-``` vue {2,4-5} [/components.vue]
+
+```vue {2,4-5} [/components.vue]
 <template>
   <input v-model.lazy="message"/>
 </template>
