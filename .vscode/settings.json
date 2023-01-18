@@ -1,4 +1,29 @@
-{
-    "nuxt.isNuxtApp": false,
-    "explorer.compactFolders": false
-}
+[
+    {
+        "editor.formatOnSave": false,
+        "eslint.alwaysShowStatus": true,
+        "eslint.packageManager": "yarn",
+        "eslint.trace.server": "off",
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+        "prettier.endOfLine": "auto",
+        "prettier.useTabs": true,
+        "prettier.vueIndentScriptAndStyle": true,
+        "tailwindCSS.includeLanguages": {
+            "plaintext": "html"
+        },
+        "tailwindCSS.suggestions": true,
+        "tailwindCSS.classAttributes": ["class", "className"],
+        "files.associations": {
+            "*.css": "tailwindcss"
+        },
+        "tailwindCSS.files.exclude": ["**/.git/**", "**/node_modules/**", "**/.hg/**", "**/.svn/**", "**/.nuxt/**"],
+        "tailwindCSS.validate": false,
+        "vetur.format.defaultFormatter.html": "none",
+        // Set the default
+        // Enable per-language
+        "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+        "tailwindCSS.experimental.configFile": ".nuxt/tailwind.config.cjs"
+    }
+]
