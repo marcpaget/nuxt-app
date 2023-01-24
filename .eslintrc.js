@@ -12,8 +12,17 @@ module.exports = {
         // https://github.com/vuejs/eslint-plugin-vue/blob/44ff0e02cd0fd08b8cd7dee0127dbb5590446323/docs/user-guide/README.md#conflict-with-prettier
         'plugin:vue/vue3-recommended',
         'prettier',
+        'plugin:nuxt/recommended',
     ],
     rules: {
         'prettier/prettier': 'warn',
+        'vue/html-self-closing': [
+            'error',
+            {
+                html: {
+                    void: 'any',
+                },
+            },
+        ],
     },
 }

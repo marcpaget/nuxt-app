@@ -30,7 +30,7 @@ export default defineNuxtConfig({
         '@nuxtjs/color-mode',
         'nuxt-icon',
         'unplugin-icons/nuxt',
-        '@nuxtjs/partytown',
+        //'@nuxtjs/partytown',
         //'@inkline/nuxt',
         'nuxt-api-party',
         'nuxt-umami',
@@ -61,6 +61,8 @@ export default defineNuxtConfig({
     },
     colorMode: {
         classSuffix: '',
+        // preference: 'system',
+        // fallback: 'light',
     },
     runtimeConfig: {
         public: {

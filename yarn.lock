@@ -559,15 +559,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@builder.io/partytown@npm:^0.7.2":
-  version: 0.7.4
-  resolution: "@builder.io/partytown@npm:0.7.4"
-  bin:
-    partytown: bin/partytown.cjs
-  checksum: b731f89a909343e7e12e9569f8d3ca24a6ac0ba266dadff2f8061d1a9e4b2a38c3fa6d28a870bffe04f7cc17a1e90d248437b967b9e3e35a8cb29b859f3c0161
-  languageName: node
-  linkType: hard
-
 "@cld-apis/utils@npm:^0.1.3":
   version: 0.1.5
   resolution: "@cld-apis/utils@npm:0.1.5"
@@ -1840,19 +1831,6 @@ __metadata:
     ufo: ^0.8.5
     vue-i18n: ^8.27.2
   checksum: a0f17118be62dde1c5d93a5d6cacd41b2c0bfce8f158305806de1d8ba7b605d22c1d11ad8e58bea64bd8cb03d3c63e3043733a21d3230552d28b0f10209565e4
-  languageName: node
-  linkType: hard
-
-"@nuxtjs/partytown@npm:^1.3.0":
-  version: 1.3.0
-  resolution: "@nuxtjs/partytown@npm:1.3.0"
-  dependencies:
-    "@builder.io/partytown": ^0.7.2
-    "@nuxt/kit": ^3.0.0
-    knitwork: ^1.0.0
-    serve-static: ^1.15.0
-    ufo: ^1.0.1
-  checksum: 34e3522301e9c205c97d74003f1583ac5117cd778c0b0ba0ae1bbf326a9da288d0e3e088064cc1481d7dac6f48e6d7923ce903ff545943e3e4c574d94251e24e
   languageName: node
   linkType: hard
 
@@ -12671,7 +12649,6 @@ __metadata:
     "@nuxtjs/cloudinary": ^1.0.3
     "@nuxtjs/color-mode": ^3.2.0
     "@nuxtjs/i18n": ^7.3.1
-    "@nuxtjs/partytown": ^1.3.0
     "@nuxtjs/supabase": ^0.3.0
     "@nuxtjs/tailwindcss": ^6.2.0
     "@nuxtjs/vuetify": ^1.12.3
