@@ -1,7 +1,7 @@
 // Todo - updated
-- Add Sentry.io
-- Fix analytics (consider adding Fathom Analytics (https://harlanzw.com/blog))
 
+-   Add Sentry.io
+-   Fix analytics (consider adding Fathom Analytics (https://harlanzw.com/blog))
 
 // Todo
 

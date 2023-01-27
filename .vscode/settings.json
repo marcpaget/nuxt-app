@@ -25,63 +25,61 @@
         "better-comments.multilineComments": true,
         "better-comments.highlightPlainText": true,
         "better-comments.tags": [
-    
-
-          {
-            "tag": "!",
-            "color": "#FF2D00",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": false,
-            "italic": false
-          },
-          {
-            "tag": "?",
-            "color": "#3498DB",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": false,
-            "italic": false
-          },
-          {
-            "tag": "//",
-            "color": "#474747",
-            "strikethrough": true,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": false,
-            "italic": false
-          },
-          {
-            "tag": "todo",
-            "color": "#FF8C00",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": false,
-            "italic": false
-          },
-          {
-            "tag": "*",
-            "color": "#98C379",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": false,
-            "italic": false
-          }, 
-          {
-            //Added by Marc
-            "tag": "FIX",
-            "color": "#FF2D00",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": false,
-            "italic": false
-          }
+            {
+                "tag": "!",
+                "color": "#FF2D00",
+                "strikethrough": false,
+                "underline": false,
+                "backgroundColor": "transparent",
+                "bold": false,
+                "italic": false
+            },
+            {
+                "tag": "?",
+                "color": "#3498DB",
+                "strikethrough": false,
+                "underline": false,
+                "backgroundColor": "transparent",
+                "bold": false,
+                "italic": false
+            },
+            {
+                "tag": "//",
+                "color": "#474747",
+                "strikethrough": true,
+                "underline": false,
+                "backgroundColor": "transparent",
+                "bold": false,
+                "italic": false
+            },
+            {
+                "tag": "todo",
+                "color": "#FF8C00",
+                "strikethrough": false,
+                "underline": false,
+                "backgroundColor": "transparent",
+                "bold": false,
+                "italic": false
+            },
+            {
+                "tag": "*",
+                "color": "#98C379",
+                "strikethrough": false,
+                "underline": false,
+                "backgroundColor": "transparent",
+                "bold": false,
+                "italic": false
+            },
+            {
+                //Added by Marc
+                "tag": "FIX",
+                "color": "#FF2D00",
+                "strikethrough": false,
+                "underline": false,
+                "backgroundColor": "transparent",
+                "bold": false,
+                "italic": false
+            }
         ],
         "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
         "tailwindCSS.experimental.configFile": ".nuxt/tailwind.config.cjs",
@@ -89,14 +87,9 @@
         "prettier.bracketSameLine": true,
         "terminal.integrated.enableMultiLinePasteWarning": false,
         "editor.autoClosingDelete": "false",
-            "eslint.validate": [
-              "javascript",
-              "javascriptreact",
-              "typescript",
-              "typescriptreact"
-            ],
-            "editor.codeActionsOnSave": {
-              "source.fixAll.eslint": true,
-            },
-          }
+        "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+        "editor.codeActionsOnSave": {
+            "source.fixAll.eslint": true
+        }
+    }
 ]

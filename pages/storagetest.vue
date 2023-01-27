@@ -7,12 +7,9 @@ const { supabase } = useSupabaseClient()
 // create function to retreive the publicurl from supabase
 //create async funtion that returns the public url
 const getPublicUrl = async () => {
-    const { data, error } = await supabase.storage
-        .from('images')
-        .getPublicUrl('imagefolder/IMG_6731.jpeg')
+    const { data, error } = await supabase.storage.from('images').getPublicUrl('imagefolder/IMG_6731.jpeg')
     return data
 }
-
 
 // const { data, error } = await supabase
 //   .storage
