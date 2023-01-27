@@ -39,8 +39,10 @@ export default defineNuxtConfig({
         // '@nuxtjs/vuetify',
         'nuxt-viewport',
         'nuxt-swiper',
+        '@nuxt/image-edge',
         'nuxt-headlessui',
     ],
+    extends: ['nuxt-seo-kit'],
     headlessui: {
         prefix: 'Headless',
     },
@@ -49,8 +51,11 @@ export default defineNuxtConfig({
         doNotTrack: false,
         cache: false,
         domains: 'selfhosting.ninja',
-        websiteId: 'bc3253eb-d82d-49dd-a290-d337841dce29',
-        scriptUrl: 'https://marcs-umami-analytics.herokuapp.com/umami.js',
+        websiteId: '13c32209-6374-4c1d-a2d6-8fbb41c89e01',
+        scriptUrl: 'https://analytics.umami.is/script.js',
+    },
+    image: {
+        domains: ['selfhosting.ninja'],
     },
     swiper: {
         // Swiper options
@@ -62,12 +67,19 @@ export default defineNuxtConfig({
     colorMode: {
         classSuffix: '',
         // preference: 'system',
-        // fallback: 'light',
+        fallback: 'light',
+        componentName: 'ColorScheme',
     },
     runtimeConfig: {
         public: {
             SUPABASE_URL: process.env.SUPABASE_URL,
             SUPABASE_KEY: process.env.SUPABASE_KEY,
+            siteUrl: 'https://selfhosting.ninja',
+            siteName: 'Selfhosting.ninja',
+            siteDescription: 'Selfhosting.ninja is a blog about selfhosting, Docker, Kubernetes and much more.',
+            language: 'en-US',
+            titleSeparator: '·',
+            trailingSlash: true,
         },
     },
     // tailwindcss: {
