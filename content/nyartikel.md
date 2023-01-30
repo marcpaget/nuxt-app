@@ -2,6 +2,7 @@
 title: Hello World
 description: My first post
 ---
+
 ::alert{type="info"}
 Virker det her?
 ::
