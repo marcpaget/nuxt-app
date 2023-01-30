@@ -2,7 +2,12 @@
 title: Hello World
 description: My first post
 ---
-
+::alert{type="info"}
+Virker det her?
+::
+::alert{type="danger"}
+Virker det her?
+::
 ::Card
 This page will use the article layout!
 ::

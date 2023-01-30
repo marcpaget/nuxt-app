@@ -6,8 +6,9 @@
             <div class="min-w-max max-w-lg">
                 <p class="text-4xl text-sky-600 text-center mb-4">SCORE: {{ score }}</p>
             </div>
+            <!-- ! FIX: Add optional timer -->
             <div class="justify-center self-center">
-                <img class="rounded-sm w-56 icon" :src="currentFlag" alt="Flag to guess" />
+                <img class="rounded-sm w-56" :src="currentFlag" alt="Flag to guess" />
             </div>
             <div class="min-w-max max-w-lg flex flex-col rounded-md shadow-sm mt-4">
                 <!-- ! FIX: Add a button to start the quiz -->
@@ -36,6 +37,18 @@ TODO: Add a timer
 TODO: Save states (in local storage?)
 TODO: Add form to enter player name
 TODO: add option for multiple players
+      // ! FIX: Add option to set difficulty level and region
+                // ! FIX: Add option to show hints (results in a lower score)
+                // ! FIX: Implement login option that saves high scores
+                 // ! FIX: Add a timer
+                  // ! FIX: Implement form to enter player name
+                   // ! FIX: Add option for multiple players
+                   // FIX: Add option to set game length
+                   // FIX: Show correct and wrong answers at the end of the game
+                   // FIX: Add a button to restart the quiz
+                   // FIX: Add a button to start the quiz
+                   //FIX : Save states (in local storage?)
+                   // Implement apiparty
  -->
 
 <script>
@@ -89,6 +102,7 @@ export default {
             if (option === this.correctAnswer) {
                 this.score++
             }
+
             this.getRandomFlag()
         },
     },

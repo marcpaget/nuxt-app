@@ -10,6 +10,7 @@ export default defineNuxtConfig({
             mode: 'out-in', // default
         },
     },
+    plugins: [{ src: '~/plugins/vercel.js', mode: 'client' }],
     ssr: false,
     components: true,
     content: {
@@ -41,10 +42,14 @@ export default defineNuxtConfig({
         'nuxt-swiper',
         '@nuxt/image-edge',
         'nuxt-headlessui',
+        '@dargmuesli/nuxt-cookie-control',
     ],
-    extends: ['nuxt-seo-kit'],
+    extends: ['nuxt-seo-kit', '@nuxt-themes/docus'],
     headlessui: {
         prefix: 'Headless',
+    },
+    apiParty: {
+        name: 'restcountriesapi',
     },
     umami: {
         autoTrack: true,
@@ -76,7 +81,8 @@ export default defineNuxtConfig({
             SUPABASE_KEY: process.env.SUPABASE_KEY,
             siteUrl: 'https://selfhosting.ninja',
             siteName: 'Selfhosting.ninja',
-            siteDescription: 'Selfhosting.ninja is a blog about selfhosting, Docker, Kubernetes and much more.',
+            siteDescription:
+                'Selfhosting.ninja is a blog about selfhosting your own homelab, Home Assistant, Docker, Kubernetes and much more.',
             language: 'en-US',
             titleSeparator: '·',
             trailingSlash: true,
@@ -86,13 +92,15 @@ export default defineNuxtConfig({
     //     cssPath: '~/assets/css/tailwind.css',
     //     configPath: 'tailwind.config.js',
     //     exposeConfig: false,
-    //     config: {},
+    //     //    config: {},
     //     injectPosition: 0,
     //     viewer: true,
     // },
-    //   css: ['~/assets/css/main.css'],
+    css: ['~/assets/css/main.css'],
     postcss: {
         plugins: {
+            'postcss-import': {},
+            'tailwindcss/nesting': 'postcss-nesting',
             tailwindcss: {},
             autoprefixer: {},
         },

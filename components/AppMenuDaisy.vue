@@ -115,19 +115,22 @@
                     </ul>
                 </li>
                 <li><nuxt-link to="/aboutPage">About</nuxt-link></li>
+
+                <li>
+                    <span v-if="user"> Logged in as: {{ user.email }} </span>
+                </li>
             </ul>
-            <li>
-                <span v-if="user"> Logged in as: {{ user.email }} </span>
-            </li>
-            <ColorModeSwitch />
         </div>
+
         <div class="navbar-end">
-            <li>
+            <ul>
+                <ColorModeSwitch />
+
                 <button v-if="user" class="btn" @click="doSignOut">Log out</button>
                 <button v-else class="btn">
                     <nuxt-link to="/login">Log in</nuxt-link>
                 </button>
-            </li>
+            </ul>
         </div>
     </div>
 </template>

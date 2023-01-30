@@ -5,63 +5,14 @@
 @tailwind utilities;
 
 @layer components {
-    .customcard {
-        background-color: theme('colors.white');
-        border-radius: theme('borderRadius.lg');
-        padding: theme('spacing.6');
-        box-shadow: theme('boxShadow.xl');
-    }
-    .carddiv {
-        background-color: theme('colors.black');
-    }
-    /*
-    .body {
-      
-    }
-   */
-
-    /*
-    ::-webkit-scrollbar {
-      width: 20px;
-    }
-  ::-webkit-scrollbar-track {
-    background: #dddddd;
-  }    
-  ::-webkit-scrollbar-thumb {
-    background: #1D3557;
-  }
-  */
-
-    .slide-left-enter-active,
-    .slide-left-leave-active,
-    .slide-right-enter-active,
-    .slide-right-leave-active {
-        transition: all 0.2s;
-    }
-    .slide-left-enter-from {
-        opacity: 0;
-        transform: translate(50px, 0);
-    }
-    .slide-left-leave-to {
-        opacity: 0;
-        transform: translate(-50px, 0);
-    }
-    .slide-right-enter-from {
-        opacity: 0;
-        transform: translate(-50px, 0);
-    }
-    .slide-right-leave-to {
-        opacity: 0;
-        transform: translate(50px, 0);
+    .icon {
+        @apply w-6 h-6;
     }
 
-    .page-enter-active,
-    .page-leave-active {
-        transition: all 0.4s;
+    .icon--off {
+        @apply group-hover:hidden inline-block;
     }
-    .page-enter-from,
-    .page-leave-to {
-        opacity: 0;
-        filter: blur(1rem);
+    .icon--on {
+        @apply hidden group-hover:inline-block;
     }
 }
