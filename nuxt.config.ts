@@ -9,6 +9,9 @@ export default defineNuxtConfig({
             name: 'page',
             mode: 'out-in', // default
         },
+        head: {
+            titleTemplate: '%pageTitle %titleSeparator %siteName',
+        },
     },
     plugins: [{ src: '~/plugins/vercel.js', mode: 'client' }],
     ssr: false,
@@ -27,7 +30,6 @@ export default defineNuxtConfig({
         // '@nuxtjs/prismic',
         '@vueuse/nuxt',
         '@nuxtjs/supabase',
-        '@vuestic/nuxt',
         '@nuxtjs/color-mode',
         'nuxt-icon',
         'unplugin-icons/nuxt',
@@ -84,7 +86,7 @@ export default defineNuxtConfig({
             siteDescription:
                 'Selfhosting.ninja is a blog about selfhosting your own homelab, Home Assistant, Docker, Kubernetes and much more.',
             language: 'en-US',
-            titleSeparator: '·',
+            titleSeparator: '|',
             trailingSlash: true,
         },
     },
@@ -96,7 +98,7 @@ export default defineNuxtConfig({
     //     injectPosition: 0,
     //     viewer: true,
     // },
-    css: ['~/assets/css/main.css'],
+    css: ['~/assets/css/main.css', 'vuetify/lib/styles/main.sass', '@mdi/font/css/materialdesignicons.min.css'],
     postcss: {
         plugins: {
             'postcss-import': {},
@@ -104,6 +106,9 @@ export default defineNuxtConfig({
             tailwindcss: {},
             autoprefixer: {},
         },
+    },
+    build: {
+        transpile: ['vuetify', 'vueuc', '@css-render/vue3-ssr', '@juggle/resize-observer'],
     },
     nitro: {
         prerender: {
@@ -113,7 +118,16 @@ export default defineNuxtConfig({
     vite: {
         logLevel: 'info',
         optimizeDeps: {
-            include: ['@headlessui/vue', '@heroicons/vue/solid', '@heroicons/vue/outline', 'vue', 'ufo'],
+            include: [
+                '@headlessui/vue',
+                '@heroicons/vue/solid',
+                '@heroicons/vue/outline',
+                'vue',
+                'ufo',
+                'naive-ui',
+                'vueuc',
+                'date-fns-tz/esm/formatInTimeZone',
+            ],
         },
     },
 })
