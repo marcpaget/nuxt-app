@@ -45,6 +45,8 @@ export default defineNuxtConfig({
         '@nuxt/image-edge',
         'nuxt-headlessui',
         '@dargmuesli/nuxt-cookie-control',
+        '@nuxt/devtools',
+        '@tailvue/nuxt',
     ],
     extends: ['nuxt-seo-kit', '@nuxt-themes/docus'],
     headlessui: {

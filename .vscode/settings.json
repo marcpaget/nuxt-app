@@ -90,7 +90,7 @@
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
     },
-    "typescript.tsdk": ".yarn/sdks/typescript/lib",
+    "typescript.tsdk": "node_modules/typescript/lib",
     "nuxt.isNuxtApp": false,
     "search.exclude": {
         "**/.yarn": true,
@@ -98,5 +98,25 @@
     },
     "eslint.nodePath": ".yarn/sdks",
     "prettier.prettierPath": ".yarn/sdks/prettier/index.js",
-    "typescript.enablePromptUseWorkspaceTsdk": true
+    "typescript.enablePromptUseWorkspaceTsdk": true,
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": true,
+        "plaintext": true,
+        "markdown": true,
+        "vue": true,
+        "javascript": true,
+        "typescript": true,
+        "json": true,
+        "jsonc": true,
+        "html": true,
+        "css": true,
+        "scss": true,
+        "less": true,
+        "python": true,
+        "php": true,
+        "java": true,
+        "c": true
+    },
+    "github.copilot.inlineSuggest.enable": true
 }
