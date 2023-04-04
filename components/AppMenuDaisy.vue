@@ -88,6 +88,27 @@
                     </nuxt-link>
                     <ul class="p-2 bg-base-300">
                         <li>
+                            <nuxt-link to="/flagQuizV5">FlagQuizV5</nuxt-link>
+                        </li>
+                        <li>
+                            <nuxt-link to="/flagQuizV6ApiParty">FlagQuizApiPartyV6</nuxt-link>
+                        </li>
+                        <li>
+                            <nuxt-link to="/cloudinaryTest">cloudinaryTest</nuxt-link>
+                        </li>
+                        <li>
+                            <nuxt-link to="/flagQuizV6ApiParty">FlagQuizApiPartyV6</nuxt-link>
+                        </li>
+                        <li>
+                            <nuxt-link to="/countryQuizV3">CountryQuizV3</nuxt-link>
+                        </li>
+                        <li>
+                            <nuxt-link to="/countryQuizV2">CountryQuizV2</nuxt-link>
+                        </li>
+                        <li>
+                            <nuxt-link to="/flagQuizV3">FlagQuizV3</nuxt-link>
+                        </li>
+                        <li>
                             <nuxt-link to="/flagQuizV2">FlagQuizV2</nuxt-link>
                         </li>
                         <li>

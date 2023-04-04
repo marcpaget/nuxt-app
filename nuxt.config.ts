@@ -1,28 +1,6 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
+import { defineNuxtConfig } from 'nuxt/config'
 export default defineNuxtConfig({
-    app: {
-        pageTransition: {
-            name: 'page',
-            mode: 'out-in', // default
-        },
-        layoutTransition: {
-            name: 'page',
-            mode: 'out-in', // default
-        },
-        head: {
-            titleTemplate: '%pageTitle %titleSeparator %siteName',
-        },
-    },
-    plugins: [{ src: '~/plugins/vercel.js', mode: 'client' }],
-    ssr: false,
-    components: true,
-    content: {
-        documentDriven: true,
-    },
-    typescript: {
-        strict: true,
-        shim: false,
-    },
     modules: [
         '@nuxt/content',
         '@nuxtjs/tailwindcss',
@@ -47,13 +25,45 @@ export default defineNuxtConfig({
         '@dargmuesli/nuxt-cookie-control',
         '@nuxt/devtools',
         '@tailvue/nuxt',
+        // 'nuxt-logrocket',
+        // '@nuxtjs/sentry',
+        'nuxt-bugsnag',
     ],
-    extends: ['nuxt-seo-kit', '@nuxt-themes/docus'],
+    plugins: [{ src: '~/plugins/vercel.js', mode: 'client' }],
+    ssr: false,
+    // logRocket: {
+    //     id: '6boygm/selfhostingninja',
+    //     dev: false,
+    //     config: {},
+    // },
+    apiParty: {
+        endpoints: {
+            restCountriesApi: {
+                url: process.env.API_PARTY_BASE_URL,
+            },
+        },
+    },
+    bugsnag: {
+        publishRelease: true,
+        config: {
+            apiKey: process.env.BUGSNAG_APIKEY,
+            enabledReleaseStages: ['staging', 'production'],
+            releaseStage: process.env.NODE_ENV,
+            appVersion: '1.0',
+        },
+    },
+    components: true,
+    content: {
+        documentDriven: true,
+    },
+    // devServerHandlers: [],
+    typescript: {
+        strict: true,
+        shim: false,
+    },
+    extends: ['nuxt-seo-kit'],
     headlessui: {
         prefix: 'Headless',
-    },
-    apiParty: {
-        name: 'restcountriesapi',
     },
     umami: {
         autoTrack: true,
@@ -66,13 +76,6 @@ export default defineNuxtConfig({
     // image: {
     //     domains: ['selfhosting.ninja'],
     // },
-    swiper: {
-        // Swiper options
-        //----------------------
-        // prefix: 'Swiper',
-        // styleLang: 'css',
-        // modules: ['navigation', 'pagination'],
-    },
     colorMode: {
         classSuffix: '',
         // preference: 'system',
@@ -89,7 +92,7 @@ export default defineNuxtConfig({
                 'Selfhosting.ninja is a blog about selfhosting your own homelab, Home Assistant, Docker, Kubernetes and much more.',
             language: 'en-US',
             titleSeparator: '|',
-            trailingSlash: true,
+            trailingSlash: false,
         },
     },
     // tailwindcss: {
@@ -100,7 +103,7 @@ export default defineNuxtConfig({
     //     injectPosition: 0,
     //     viewer: true,
     // },
-    css: ['~/assets/css/main.css', 'vuetify/lib/styles/main.sass', '@mdi/font/css/materialdesignicons.min.css'],
+    // css: ['~/assets/css/main.css', 'vuetify/lib/styles/main.sass', '@mdi/font/css/materialdesignicons.min.css'],
     postcss: {
         plugins: {
             'postcss-import': {},
@@ -109,13 +112,16 @@ export default defineNuxtConfig({
             autoprefixer: {},
         },
     },
+    css: [
+        'primevue/resources/themes/lara-light-blue/theme.css',
+        'primevue/resources/primevue.css',
+        'primeicons/primeicons.css',
+    ],
     build: {
-        transpile: ['vuetify', 'vueuc', '@css-render/vue3-ssr', '@juggle/resize-observer'],
-    },
-    nitro: {
-        prerender: {
-            routes: ['/sitemap.xml'],
-        },
+        transpile:
+            process.env.NODE_ENV === 'production'
+                ? ['naive-ui', 'vueuc', '@css-render/vue3-ssr', '@juggle/resize-observer', 'vuetify', 'primevue']
+                : ['@juggle/resize-observer', 'vuetify', 'primevue'],
     },
     vite: {
         logLevel: 'info',

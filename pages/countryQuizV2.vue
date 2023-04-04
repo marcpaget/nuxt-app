@@ -3,17 +3,21 @@
         <span class="text-4xl text-sky-600 text-center mb-4 mt-4">Guess the capital</span>
 
         <div
-            class="bg-slate-300 dark:bg-slate-100 mt-8 rounded-md justify-center self-center shadow-md shadow-slate-500 dark:shadow-slate-50 outline outline-1 box-border p-8 border-8"
+            class="bg-slate-300 dark:bg-slate-100 h-full mt-8 rounded-md justify-center self-center shadow-md shadow-slate-500 dark:shadow-slate-50 outline outline-1 box-border p-8 border-8"
         >
             <section v-if="totalQuestions < 10">
                 <div class="min-w-max max-w-lg">
-                    <span class="text-4xl text-sky-600 text-center mb-4">Question {{ totalQuestions }} / 10</span>
+                    <div>
+                        <p class="text-xl text-left text-sky-600 mb-4">Question</p>
+                        <p class="text-xl text-left text-sky-600 mb-4">{{ totalQuestions }} / 10</p>
 
-                    <span class="text-4xl text-sky-600 text-center mb-4">Score {{ score }} / {{ totalQuestions }}</span>
+                        <p class="text-xl text-right text-sky-600 mb-4">Score</p>
+                        <p class="text-xl text-right text-sky-600 mb-4">{{ score }} / {{ totalQuestions }}</p>
+                    </div>
                 </div>
                 <!-- ! FIX: Add optional timer -->
                 <div class="justify-center self-center">
-                    <p class="text-3xl">{{ currentCountry }}</p>
+                    <p class="text-5xl">{{ currentCountry }}</p>
                 </div>
                 <div class="min-w-max max-w-lg flex flex-col rounded-md shadow-sm mt-4">
                     <!--   ! FIX: Add a button to start the quiz  -->

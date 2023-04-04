@@ -5,4 +5,12 @@ node_modules
 .cache
 .output
 .env
+.slicemachine
+.unlighthouse
+.vscode
 *.DS_Store
+dist
+.idea
+images/*
+!images/README.md
+.vercel
