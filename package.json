@@ -128,7 +128,7 @@
         "yarn": "^1.22.19"
     },
     "engines": {
-        "node": "^16.11.0 || ^17.0.0 || || ^18.0.0"
+        "node": "^18.0.0"
     },
     "lint-staged": {
         "*.{css,less,scss,html,json,jsx,js}": [
