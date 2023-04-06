@@ -20,7 +20,7 @@ export default defineNuxtConfig({
         // '@nuxtjs/vuetify',
         'nuxt-viewport',
         'nuxt-swiper',
-        //'@nuxt/image-edge',
+        '@nuxt/image-edge',
         'nuxt-headlessui',
         '@dargmuesli/nuxt-cookie-control',
         '@nuxt/devtools',
@@ -73,9 +73,12 @@ export default defineNuxtConfig({
         websiteId: '13c32209-6374-4c1d-a2d6-8fbb41c89e01',
         scriptUrl: 'https://analytics.umami.is/script.js',
     },
-    // image: {
-    //     domains: ['selfhosting.ninja'],
-    // },
+    image: {
+        domains: ['selfhosting.ninja'],
+        cloudinary: {
+            baseURL: 'https://res.cloudinary.com/selfhostingninja/image/upload/v1679713729',
+        },
+    },
     colorMode: {
         classSuffix: '',
         // preference: 'system',
