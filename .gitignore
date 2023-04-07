@@ -14,3 +14,4 @@ dist
 images/*
 !images/README.md
 .vercel
+netlify.toml
