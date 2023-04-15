@@ -38,6 +38,9 @@
                         </nuxt-link>
                         <ul class="p-2">
                             <li>
+                                <nuxt-link to="/vueusetest">VueUseTest</nuxt-link>
+                            </li>
+                            <li>
                                 <nuxt-link to="/flagQuizV2">FlagQuizV2</nuxt-link>
                             </li>
                             <li>
@@ -87,6 +90,9 @@
                         </svg>
                     </nuxt-link>
                     <ul class="p-2 bg-base-300">
+                        <li>
+                            <nuxt-link to="/vueusetest">VueUseTest</nuxt-link>
+                        </li>
                         <li>
                             <nuxt-link to="/flagQuizV5">FlagQuizV5</nuxt-link>
                         </li>
