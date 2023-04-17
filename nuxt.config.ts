@@ -25,7 +25,7 @@ export default defineNuxtConfig({
         '@dargmuesli/nuxt-cookie-control',
         '@nuxt/devtools',
         // 'nuxt-logrocket',
-        'nuxt-bugsnag',
+        // 'nuxt-bugsnag',
     ],
     plugins: [{ src: '~/plugins/vercel.js', mode: 'client' }],
     ssr: false,
@@ -41,15 +41,15 @@ export default defineNuxtConfig({
             },
         },
     },
-    bugsnag: {
-        publishRelease: true,
-        config: {
-            apiKey: process.env.BUGSNAG_APIKEY,
-            enabledReleaseStages: ['staging', 'production'],
-            releaseStage: process.env.NODE_ENV,
-            appVersion: '1.0',
-        },
-    },
+    // bugsnag: {
+    //     publishRelease: true,
+    //     config: {
+    //         apiKey: process.env.BUGSNAG_APIKEY,
+    //         enabledReleaseStages: ['staging', 'production'],
+    //         releaseStage: process.env.NODE_ENV,
+    //         appVersion: '1.0',
+    //     },
+    // },
     components: true,
     content: {
         documentDriven: true,
