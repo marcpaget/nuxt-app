@@ -23,11 +23,22 @@ let accurateAltitude = computed(() => {
     }
     return 0
 })
+let accuracy = computed(() => {
+    if (coords.value.accuracy) {
+        return coords.value.accuracy.toFixed(2)
+    }
+    return 0
+})
+let heading = computed(() => {
+    if (coords.value.heading) {
+        return coords.value.heading.toFixed(2)
+    }
+    return 0
+})
 </script>
 
 <template>
-    <div>
-        <!-- <pre lang="json">{{
+    <!-- <pre lang="json">{{
             JSON.stringify(
                 {
                     coords: {
@@ -46,26 +57,35 @@ let accurateAltitude = computed(() => {
                 2
             )
         }}</pre> -->
-        <p>Speed: {{ speedkmh }} km/h</p>
-        <div class="stats bg-primary text-primary-content">
-            <div class="stat">
-                <div class="stat-title">Speed</div>
-                <div class="stat-value">{{ speedkmh }}</div>
-                <div class="stat-desc">KM/T</div>
-                <div class="stat-actions">
-                    <button class="btn btn-sm btn-success" @click="resume">Start watch</button>
-                </div>
-            </div>
-
+    <p>Speed: {{ speedkmh }} km/h</p>
+    <div class="stats stats-vertical bg-primary text-primary-content">
+        <div class="stat">
+            <div class="stat-title">Speed</div>
+            <div class="stat-value">{{ speedkmh }}</div>
+            <div class="stat-desc">KM/T</div>
             <div class="stat">
                 <div class="stat-title">Approx. altitude</div>
                 <div class="stat-value">{{ altitude }}</div>
                 <div class="stat-desc">M.O.H.</div>
-            </div>
-            <div class="stat">
-                <div class="stat-title">Accurate altitude</div>
-                <div class="stat-value">{{ accurateAltitude }}</div>
-                <div class="stat-desc">m.o.h.</div>
+
+                <div class="stat">
+                    <div class="stat-title">Accurate altitude</div>
+                    <div class="stat-value">{{ accurateAltitude }}</div>
+                    <div class="stat-desc">m.o.h.</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-title">Heading</div>
+                    <div class="stat-value">{{ heading }}</div>
+                    <div class="stat-desc" />
+                </div>
+                <div class="stat">
+                    <div class="stat-title">Accuracy</div>
+                    <div class="stat-value">{{ accuracy }}</div>
+                    <div class="stat-desc" />
+                </div>
+                <div class="stat-actions">
+                    <button class="btn btn-sm btn-success" @click="resume">Start watch</button>
+                </div>
                 <div class="stat-actions">
                     <button class="btn btn-sm" @click="pause">Pause watch</button>
                 </div>
