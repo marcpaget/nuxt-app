@@ -26,9 +26,13 @@ export default defineNuxtConfig({
         '@nuxt/devtools',
         // 'nuxt-logrocket',
         // 'nuxt-bugsnag',
+        '@nuxtjs/i18n',
     ],
     plugins: [{ src: '~/plugins/vercel.js', mode: 'client' }],
     ssr: false,
+    i18n: {
+        vueI18n: './i18n.config.ts',
+    },
     // logRocket: {
     //     id: '6boygm/selfhostingninja',
     //     dev: false,
