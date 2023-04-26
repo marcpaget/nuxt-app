@@ -30,9 +30,9 @@ export default defineNuxtConfig({
     ],
     plugins: [{ src: '~/plugins/vercel.js', mode: 'client' }],
     ssr: false,
-    // i18n: {
-    //     vueI18n: './i18n.config.ts',
-    // },
+    i18n: {
+        vueI18n: './i18n.config.ts',
+    },
     // logRocket: {
     //     id: '6boygm/selfhostingninja',
     //     dev: false,
