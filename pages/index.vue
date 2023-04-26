@@ -1,12 +1,12 @@
 <template>
     <div>
-        <form>
+        <!-- <form>
             <select v-model="locale">
                 <option value="en">en</option>
                 <option value="fr">fr</option>
             </select>
             <p>{{ $t('welcome') }}</p>
-        </form>
+        </form> -->
         <AppHeader />
     </div>
 </template>
@@ -18,7 +18,7 @@
 //     AppHeader
 //   },
 // }
-const { locale } = useI18n()
+//const { locale } = useI18n()
 definePageMeta({
     middleware: ['auth'],
     layout: 'default',
