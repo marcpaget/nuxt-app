@@ -14,7 +14,7 @@ export default defineNuxtConfig({
         //'@nuxtjs/partytown',
         //'@inkline/nuxt',
         'nuxt-api-party',
-        'nuxt-umami',
+        // 'nuxt-umami',
         '@sidebase/nuxt-session',
         '@pinia/nuxt',
         // '@nuxtjs/vuetify',
@@ -30,6 +30,13 @@ export default defineNuxtConfig({
     ],
     plugins: [{ src: '~/plugins/vercel.js', mode: 'client' }],
     ssr: false,
+    apiParty: {
+        endpoints: {
+            restCountriesApi: {
+                url: process.env.API_PARTY_BASE_URL,
+            },
+        },
+    },
     // i18n: {
     //     vueI18n: './i18n.config.ts',
     // },
@@ -38,13 +45,7 @@ export default defineNuxtConfig({
     //     dev: false,
     //     config: {},
     // },
-    apiParty: {
-        endpoints: {
-            restCountriesApi: {
-                url: process.env.API_PARTY_BASE_URL,
-            },
-        },
-    },
+
     // bugsnag: {
     //     publishRelease: true,
     //     config: {
