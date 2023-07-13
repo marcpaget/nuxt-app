@@ -27,7 +27,11 @@ export default defineNuxtConfig({
         // 'nuxt-logrocket',
         // 'nuxt-bugsnag',
         '@nuxtjs/i18n',
+        '@nuxtjs/eslint-module',
     ],
+    eslint: {
+        /* module options */
+    },
     plugins: [{ src: '~/plugins/vercel.js', mode: 'client' }],
     ssr: false,
     apiParty: {
