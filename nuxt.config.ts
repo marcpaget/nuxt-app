@@ -28,9 +28,30 @@ export default defineNuxtConfig({
         // 'nuxt-bugsnag',
         '@nuxtjs/i18n',
         '@nuxtjs/eslint-module',
+        //'@nuxthq/ui',
+        'nuxt-gtag',
     ],
+    runtimeConfig: {
+        public: {
+            SUPABASE_URL: process.env.SUPABASE_URL,
+            SUPABASE_KEY: process.env.SUPABASE_KEY,
+            siteUrl: 'https://selfhosting.ninja',
+            siteName: 'Selfhosting.ninja',
+            siteDescription:
+                'Selfhosting.ninja is a blog about selfhosting your own homelab, Home Assistant, Docker, Kubernetes and much more.',
+            language: 'en-US',
+            titleSeparator: '|',
+            trailingSlash: false,
+        },
+    },
+    gtag: {
+        id: 'G-J74M1SG3NQ',
+    },
+
     eslint: {
-        /* module options */
+        emitWarning: false,
+        lintOnStart: false,
+        emitError: false,
     },
     plugins: [{ src: '~/plugins/vercel.js', mode: 'client' }],
     ssr: false,
@@ -92,19 +113,7 @@ export default defineNuxtConfig({
         fallback: 'light',
         componentName: 'ColorScheme',
     },
-    runtimeConfig: {
-        public: {
-            SUPABASE_URL: process.env.SUPABASE_URL,
-            SUPABASE_KEY: process.env.SUPABASE_KEY,
-            siteUrl: 'https://selfhosting.ninja',
-            siteName: 'Selfhosting.ninja',
-            siteDescription:
-                'Selfhosting.ninja is a blog about selfhosting your own homelab, Home Assistant, Docker, Kubernetes and much more.',
-            language: 'en-US',
-            titleSeparator: '|',
-            trailingSlash: false,
-        },
-    },
+
     // tailwindcss: {
     //     cssPath: '~/assets/css/tailwind.css',
     //     configPath: 'tailwind.config.js',

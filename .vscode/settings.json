@@ -81,7 +81,7 @@
         }
     ],
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "tailwindCSS.experimental.configFile": ".nuxt/tailwind.config.cjs",
+    "tailwindCSS.experimental.configFile": "tailwind.config.js",
     "editor.formatOnSave": false,
     "prettier.bracketSameLine": true,
     "terminal.integrated.enableMultiLinePasteWarning": false,

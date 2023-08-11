@@ -15,3 +15,5 @@ images/*
 !images/README.md
 .vercel
 netlify.toml
+# Sentry Auth Token
+.sentryclirc
