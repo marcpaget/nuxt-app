@@ -14,7 +14,7 @@ export default defineNuxtConfig({
         //'@nuxtjs/partytown',
         //'@inkline/nuxt',
         'nuxt-api-party',
-        // 'nuxt-umami',
+        //'nuxt-umami',
         '@sidebase/nuxt-session',
         '@pinia/nuxt',
         // '@nuxtjs/vuetify',
@@ -26,10 +26,18 @@ export default defineNuxtConfig({
         '@nuxt/devtools',
         // 'nuxt-logrocket',
         // 'nuxt-bugsnag',
-        '@nuxtjs/i18n',
+        //'@nuxtjs/i18n',
         '@nuxtjs/eslint-module',
         //'@nuxthq/ui',
         'nuxt-gtag',
+        'nuxt-vercel-analytics',
+        'nuxt-disqus',
+        'nuxt-og-image',
+        'nuxt-simple-sitemap',
+        'nuxt-simple-robots',
+        'nuxt-link-checker',
+        'nuxt-seo-experiments',
+        //'nuxt-schema-org',
     ],
     runtimeConfig: {
         public: {
@@ -44,6 +52,9 @@ export default defineNuxtConfig({
             trailingSlash: false,
         },
     },
+    disqus: {
+        shortname: 'selfhosting-tech',
+    },
     gtag: {
         id: 'G-J74M1SG3NQ',
     },
@@ -53,12 +64,11 @@ export default defineNuxtConfig({
         lintOnStart: false,
         emitError: false,
     },
-    plugins: [{ src: '~/plugins/vercel.js', mode: 'client' }],
     ssr: false,
     apiParty: {
         endpoints: {
             restCountriesApi: {
-                url: process.env.API_PARTY_BASE_URL,
+                url: process.env.API_PARTY_BASE_URL!,
             },
         },
     },
@@ -89,18 +99,17 @@ export default defineNuxtConfig({
         strict: true,
         shim: false,
     },
-    extends: ['nuxt-seo-kit'],
     headlessui: {
         prefix: 'Headless',
     },
-    umami: {
-        autoTrack: true,
-        doNotTrack: false,
-        cache: false,
-        domains: 'selfhosting.ninja',
-        websiteId: '13c32209-6374-4c1d-a2d6-8fbb41c89e01',
-        scriptUrl: 'https://analytics.umami.is/script.js',
-    },
+    // umami: {
+    //     autoTrack: true,
+    //     doNotTrack: false,
+    //     cache: false,
+    //     domains: 'selfhosting.ninja',
+    //     websiteId: '13c32209-6374-4c1d-a2d6-8fbb41c89e01',
+    //     scriptUrl: 'https://analytics.umami.is/script.js',
+    // },
     image: {
         domains: ['selfhosting.ninja'],
         cloudinary: {
@@ -123,14 +132,14 @@ export default defineNuxtConfig({
     //     viewer: true,
     // },
     // css: ['~/assets/css/main.css', 'vuetify/lib/styles/main.sass', '@mdi/font/css/materialdesignicons.min.css'],
-    postcss: {
-        plugins: {
-            'postcss-import': {},
-            'tailwindcss/nesting': 'postcss-nesting',
-            tailwindcss: {},
-            autoprefixer: {},
-        },
-    },
+    // postcss: {
+    //     plugins: {
+    //         'postcss-import': {},
+    //         'tailwindcss/nesting': 'postcss-nesting',
+    //         tailwindcss: {},
+    //         autoprefixer: {},
+    //     },
+    // },
     css: [
         'primevue/resources/themes/lara-light-blue/theme.css',
         'primevue/resources/primevue.css',
