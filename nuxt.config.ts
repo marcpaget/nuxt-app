@@ -1,5 +1,4 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
-import { defineNuxtConfig } from 'nuxt/config'
 export default defineNuxtConfig({
     modules: [
         '@nuxt/content',
@@ -36,9 +35,12 @@ export default defineNuxtConfig({
         'nuxt-simple-sitemap',
         'nuxt-simple-robots',
         'nuxt-link-checker',
-        'nuxt-seo-experiments',
         //'nuxt-schema-org',
+        'nuxt-seo-experiments',
+        '@nuxt/image',
+        //'@nuxtus/nuxt-localtunnel',
     ],
+
     runtimeConfig: {
         public: {
             SUPABASE_URL: process.env.SUPABASE_URL,
@@ -52,9 +54,13 @@ export default defineNuxtConfig({
             trailingSlash: false,
         },
     },
+
+    //localtunnel: {},
+
     disqus: {
         shortname: 'selfhosting-tech',
     },
+
     gtag: {
         id: 'G-J74M1SG3NQ',
     },
@@ -64,7 +70,9 @@ export default defineNuxtConfig({
         lintOnStart: false,
         emitError: false,
     },
+
     ssr: false,
+
     apiParty: {
         endpoints: {
             restCountriesApi: {
@@ -72,6 +80,7 @@ export default defineNuxtConfig({
             },
         },
     },
+
     // i18n: {
     //     vueI18n: './i18n.config.ts',
     // },
@@ -91,17 +100,21 @@ export default defineNuxtConfig({
     //     },
     // },
     components: true,
+
     content: {
         documentDriven: true,
     },
+
     // devServerHandlers: [],
     typescript: {
         strict: true,
         shim: false,
     },
+
     headlessui: {
         prefix: 'Headless',
     },
+
     // umami: {
     //     autoTrack: true,
     //     doNotTrack: false,
@@ -116,6 +129,7 @@ export default defineNuxtConfig({
             baseURL: 'https://res.cloudinary.com/selfhostingninja/image/upload/v1679713729',
         },
     },
+
     colorMode: {
         classSuffix: '',
         // preference: 'system',
@@ -145,12 +159,23 @@ export default defineNuxtConfig({
         'primevue/resources/primevue.css',
         'primeicons/primeicons.css',
     ],
+
     build: {
         transpile:
             process.env.NODE_ENV === 'production'
-                ? ['naive-ui', 'vueuc', '@css-render/vue3-ssr', '@juggle/resize-observer', 'vuetify', 'primevue']
-                : ['@juggle/resize-observer', 'vuetify', 'primevue'],
+                ? [
+                      'naive-ui',
+                      'vueuc',
+                      '@css-render/vue3-ssr',
+                      '@juggle/resize-observer',
+                      'vuetify',
+                      'primevue',
+                      'vue-resizer',
+                      'asyncDataDefaults',
+                  ]
+                : ['@juggle/resize-observer', 'vuetify', 'primevue', 'vue-resizer', 'asyncDataDefaults'],
     },
+
     vite: {
         logLevel: 'info',
         optimizeDeps: {
@@ -162,8 +187,11 @@ export default defineNuxtConfig({
                 'ufo',
                 'naive-ui',
                 'vueuc',
-                'date-fns-tz/esm/formatInTimeZone',
             ],
         },
+    },
+
+    devtools: {
+        enabled: true,
     },
 })

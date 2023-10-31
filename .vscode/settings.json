@@ -118,5 +118,10 @@
         "java": true,
         "c": true
     },
-    "github.copilot.inlineSuggest.enable": true
+    "github.copilot.inlineSuggest.enable": true,
+    "remote.extensionKind": {
+        "pub.name": [
+            "ui"
+        ]
+    }
 }
