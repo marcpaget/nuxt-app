@@ -19,14 +19,14 @@
         "@nuxt/content": "^2.9.0",
         "@nuxt/devtools": "^1.0.0",
         "@nuxt/image": "^1.0.0",
-        "@nuxt/image-edge": "1.0.0-28307739.8b815ac",
+        "@nuxt/image-edge": "1.0.0-testing",
         "@nuxt/test-utils-edge": "^3.8.0-28284309.b3d3d7f4",
         "@nuxt/types": "2.17.2",
         "@nuxt/typescript-build": "^3.0.1",
         "@nuxthq/ui": "^2.7.0",
         "@nuxtjs/color-mode": "^3.3.0",
         "@nuxtjs/eslint-module": "^4.1.0",
-        "@nuxtjs/i18n": "next",
+        "@nuxtjs/i18n": "^8.0.0-rc.5",
         "@nuxtjs/supabase": "^1.1.3",
         "@nuxtjs/tailwindcss": "^6.8.1",
         "@nuxtjs/vuetify": "^1.12.3",
@@ -87,7 +87,7 @@
         "@formkit/themes": "^1.2.2",
         "@headlessui/vue": "1.7.16",
         "@heroicons/vue": "2.0.18",
-        "@inkline/inkline": "^4.6.0",
+        "@inkline/inkline": "^4.6.1",
         "@inkline/nuxt": "^3.1.4",
         "@mdi/font": "^7.3.67",
         "@nuxt-themes/docus": "^1.15.0",
@@ -95,10 +95,10 @@
         "@nuxt/vite-builder": "^3.8.0",
         "@nuxtjs/algolia": "^1.10.1",
         "@nuxtjs/cloudinary": "^2.3.4",
-        "@nuxtjs/sentry": "^7.5.0",
+        "@nuxtjs/sentry": "^8.0.1",
         "@nuxtus/nuxt-localtunnel": "^1.0.1",
         "@pinia/nuxt": "^0.5.1",
-        "@prisma/client": "5.5.2",
+        "@prisma/client": "^5.5.2",
         "@sentry/cli": "^2.21.2",
         "@sidebase/nuxt-session": "^0.2.7",
         "@splidejs/vue-splide": "^0.6.12",
@@ -121,7 +121,7 @@
         "nuxt-logrocket": "^2.0.14",
         "nuxt-swiper": "^1.2.2",
         "nuxt-umami": "^2.5.5",
-        "nuxt3": "^3.8.0-28276489.5397e93f",
+        "nuxt3": "^3.8.0-28284309.b3d3d7f4",
         "package": "^1.0.1",
         "peer": "^1.0.1",
         "pinia": "2.1.7",
@@ -137,10 +137,11 @@
         "vite": "4.5.0",
         "vue-eslint-parser": "^9.3.2",
         "vuetify": "^3.3.23",
-        "yarn": "^1.22.19"
+        "yarn": "^1.22.19",
+        "yarnpkg": "^0.0.0"
     },
     "engines": {
-        "node": "^18.0.0"
+        "node": "^21.1.0"
     },
     "lint-staged": {
         "*.{css,less,scss,html,json,jsx,js}": [
@@ -149,5 +150,6 @@
         "*.js": "eslint --fix"
     },
     "version": "0.0.0",
-    "name": "nuxt-app"
+    "name": "nuxt-app",
+    "packageManager": "yarn@4.0.1"
 }
