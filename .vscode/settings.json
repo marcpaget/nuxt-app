@@ -118,7 +118,7 @@
         "java": true,
         "c": true
     },
-    "github.copilot.inlineSuggest.enable": true,
+    "github.copilot.editor.enableAutoCompletions": true,
     "remote.extensionKind": {
         "pub.name": [
             "ui"
