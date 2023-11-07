@@ -1,5 +1,4 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
-import { defineNuxtConfig } from 'nuxt/config'
 export default defineNuxtConfig({
     modules: [
         '@nuxt/content',
@@ -30,11 +29,15 @@ export default defineNuxtConfig({
         '@nuxtjs/eslint-module',
         //'@nuxthq/ui',
         'nuxt-gtag',
+        'nuxt-vercel-analytics',
+        '@nuxt/image',
+        'nuxt-seo-experiments',
     ],
+
     runtimeConfig: {
         public: {
-            SUPABASE_URL: process.env.SUPABASE_URL,
-            SUPABASE_KEY: process.env.SUPABASE_KEY,
+            SUPABASE_URL: process.env.SUPABASE_URL!,
+            SUPABASE_KEY: process.env.SUPABASE_KEY!,
             siteUrl: 'https://selfhosting.ninja',
             siteName: 'Selfhosting.ninja',
             siteDescription:
@@ -44,6 +47,7 @@ export default defineNuxtConfig({
             trailingSlash: false,
         },
     },
+
     gtag: {
         id: 'G-J74M1SG3NQ',
     },
@@ -53,15 +57,17 @@ export default defineNuxtConfig({
         lintOnStart: false,
         emitError: false,
     },
-    plugins: [{ src: '~/plugins/vercel.js', mode: 'client' }],
+
     ssr: false,
+
     apiParty: {
         endpoints: {
             restCountriesApi: {
-                url: process.env.API_PARTY_BASE_URL,
+                url: process.env.API_PARTY_BASE_URL!,
             },
         },
     },
+
     // i18n: {
     //     vueI18n: './i18n.config.ts',
     // },
@@ -81,32 +87,37 @@ export default defineNuxtConfig({
     //     },
     // },
     components: true,
+
     content: {
         documentDriven: true,
     },
+
     // devServerHandlers: [],
     typescript: {
         strict: true,
         shim: false,
     },
-    extends: ['nuxt-seo-kit'],
+
     headlessui: {
         prefix: 'Headless',
     },
-    umami: {
-        autoTrack: true,
-        doNotTrack: false,
-        cache: false,
-        domains: 'selfhosting.ninja',
-        websiteId: '13c32209-6374-4c1d-a2d6-8fbb41c89e01',
-        scriptUrl: 'https://analytics.umami.is/script.js',
-    },
+
+    // umami: {
+    //     autoTrack: true,
+    //     doNotTrack: false,
+    //     cache: false,
+    //     domains: 'selfhosting.ninja',
+    //     websiteId: '13c32209-6374-4c1d-a2d6-8fbb41c89e01',
+    //     scriptUrl: 'https://analytics.umami.is/script.js',
+    // },
+
     image: {
         domains: ['selfhosting.ninja'],
         cloudinary: {
             baseURL: 'https://res.cloudinary.com/selfhostingninja/image/upload/v1679713729',
         },
     },
+
     colorMode: {
         classSuffix: '',
         // preference: 'system',
@@ -123,25 +134,19 @@ export default defineNuxtConfig({
     //     viewer: true,
     // },
     // css: ['~/assets/css/main.css', 'vuetify/lib/styles/main.sass', '@mdi/font/css/materialdesignicons.min.css'],
-    postcss: {
-        plugins: {
-            'postcss-import': {},
-            'tailwindcss/nesting': 'postcss-nesting',
-            tailwindcss: {},
-            autoprefixer: {},
-        },
-    },
     css: [
         'primevue/resources/themes/lara-light-blue/theme.css',
         'primevue/resources/primevue.css',
         'primeicons/primeicons.css',
     ],
+
     build: {
         transpile:
             process.env.NODE_ENV === 'production'
                 ? ['naive-ui', 'vueuc', '@css-render/vue3-ssr', '@juggle/resize-observer', 'vuetify', 'primevue']
                 : ['@juggle/resize-observer', 'vuetify', 'primevue'],
     },
+
     vite: {
         logLevel: 'info',
         optimizeDeps: {
@@ -153,8 +158,11 @@ export default defineNuxtConfig({
                 'ufo',
                 'naive-ui',
                 'vueuc',
-                'date-fns-tz/esm/formatInTimeZone',
             ],
         },
+    },
+
+    devtools: {
+        enabled: true,
     },
 })

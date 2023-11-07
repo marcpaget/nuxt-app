@@ -1,6 +1,5 @@
 {
     "eslint.alwaysShowStatus": true,
-    "eslint.packageManager": "yarn",
     "eslint.trace.server": "off",
     "editor.quickSuggestions": {
         "strings": true
@@ -118,5 +117,5 @@
         "java": true,
         "c": true
     },
-    "github.copilot.inlineSuggest.enable": true
+    "github.copilot.editor.enableAutoCompletions": true
 }
