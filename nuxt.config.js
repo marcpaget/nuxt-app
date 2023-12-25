@@ -36,8 +36,8 @@ export default defineNuxtConfig({
 
     runtimeConfig: {
         public: {
-            SUPABASE_URL: process.env.SUPABASE_URL!,
-            SUPABASE_KEY: process.env.SUPABASE_KEY!,
+            SUPABASE_URL: process.env.SUPABASE_URL,
+            SUPABASE_KEY: process.env.SUPABASE_KEY,
             siteUrl: 'https://selfhosting.ninja',
             siteName: 'Selfhosting.ninja',
             siteDescription:
@@ -58,12 +58,12 @@ export default defineNuxtConfig({
         emitError: false,
     },
 
-    ssr: false,
+    ssr: true,
 
     apiParty: {
         endpoints: {
             restCountriesApi: {
-                url: process.env.API_PARTY_BASE_URL!,
+                url: process.env.API_PARTY_BASE_URL,
             },
         },
     },
