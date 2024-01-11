@@ -5,9 +5,3 @@
         <nuxt-img src="/IMG_0765_z31szw.jpg" alt="" />
     </div>
 </template>
-
-<script setup>
-definePageMeta({
-    middleware: ['auth'],
-})
-</script>

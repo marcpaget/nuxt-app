@@ -12,6 +12,9 @@ module.exports = {
         './app.vue',
         'node_modules/tailvue/dist/tailvue.es.js',
     ],
+    daisyui: {
+        themes: ['light', 'dark', 'cupcake'],
+    },
     theme: {
         extend: {
             fontFamily: {

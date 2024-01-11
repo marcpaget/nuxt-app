@@ -345,11 +345,9 @@
 <script setup lang="ts">
 const user = useSupabaseUser()
 const client = useSupabaseClient()
-const router = useRouter()
 
 const doSignOut = async () => {
     await client.auth.signOut()
-    router.replace('/login')
 }
 </script>
 

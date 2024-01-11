@@ -19,7 +19,6 @@ export default defineNuxtConfig({
         // '@nuxtjs/vuetify',
         'nuxt-viewport',
         'nuxt-swiper',
-        '@nuxt/image-edge',
         'nuxt-headlessui',
         '@dargmuesli/nuxt-cookie-control',
         '@nuxt/devtools',
@@ -31,7 +30,7 @@ export default defineNuxtConfig({
         'nuxt-gtag',
         'nuxt-vercel-analytics',
         '@nuxt/image',
-        'nuxt-seo-experiments',
+        '@nuxtjs/seo',
     ],
 
     runtimeConfig: {
@@ -63,7 +62,7 @@ export default defineNuxtConfig({
     apiParty: {
         endpoints: {
             restCountriesApi: {
-                url: process.env.API_PARTY_BASE_URL,
+                url: process.env.API_PARTY_BASE_URL!,
             },
         },
     },
@@ -94,7 +93,6 @@ export default defineNuxtConfig({
 
     // devServerHandlers: [],
     typescript: {
-        strict: true,
         shim: false,
     },
 
