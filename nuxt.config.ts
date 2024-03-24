@@ -34,6 +34,7 @@ export default defineNuxtConfig({
     ],
     supabase: {
         redirect: false,
+        // https://www.reddit.com/r/Nuxt/comments/17a3p7r/nuxt_app_keeps_redirecting_to_login/
     },
     runtimeConfig: {
         public: {

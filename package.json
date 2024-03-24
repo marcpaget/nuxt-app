@@ -7,8 +7,6 @@
         "allupdate": "yarn upgrade-interactive",
         "lint": "eslint --ext \".ts,.js,.vue\" --ignore-path .gitignore .",
         "lintfix": "eslint --fix --ext \".ts,.js,.vue\" --ignore-path .gitignore .",
-        "prepare": "husky install",
-        "postinstall": "husky install",
         "sentry:sourcemaps": "sentry-cli sourcemaps inject --org marc-paget --project selfhostingtech .output && sentry-cli sourcemaps upload --org marc-paget --project selfhostingtech .output"
     },
     "devDependencies": {
