@@ -32,7 +32,9 @@ export default defineNuxtConfig({
         '@nuxt/image',
         '@nuxtjs/seo',
     ],
-
+    supabase: {
+        redirect: false,
+    },
     runtimeConfig: {
         public: {
             SUPABASE_URL: process.env.SUPABASE_URL,

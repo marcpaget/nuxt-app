@@ -12,7 +12,7 @@
         "sentry:sourcemaps": "sentry-cli sourcemaps inject --org marc-paget --project selfhostingtech .output && sentry-cli sourcemaps upload --org marc-paget --project selfhostingtech .output"
     },
     "devDependencies": {
-        "@commitlint/cli": "^18.4.4",
+        "@commitlint/cli": "^18.6.1",
         "@commitlint/config-conventional": "^18.4.4",
         "@iconify/json": "^2.2.166",
         "@iconify/vue": "^4.1.1",
@@ -44,7 +44,6 @@
         "eslint-plugin-prettier": "^5.1.2",
         "eslint-plugin-vue": "^9.19.2",
         "eslint-plugin-vuetify": "^2.1.1",
-        "husky": "^8.0.3",
         "lint-staged": "^15.2.0",
         "material-design-icons-iconfont": "^6.7.0",
         "nuxt": "^3.9.1",
@@ -102,7 +101,6 @@
         "daisyui": "^4.5.0",
         "express": "^4.18.2",
         "express-session": "^1.17.3",
-        "husky": "^8.0.3",
         "naive-ui": "^2.37.0",
         "nuxt-bugsnag": "^7.2.3",
         "nuxt-ghost": "^2.1.5",
