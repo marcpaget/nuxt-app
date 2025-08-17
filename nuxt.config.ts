@@ -1,33 +1,11 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-    app: {
-        pageTransition: {
-            name: 'page',
-            mode: 'out-in', // default
-        },
-        layoutTransition: {
-            name: 'page',
-            mode: 'out-in', // default
-        },
-        head: {
-            titleTemplate: '%pageTitle %titleSeparator %siteName',
-        },
-    },
-    plugins: [{ src: '~/plugins/vercel.js', mode: 'client' }],
-    ssr: false,
-    components: true,
-    content: {
-        documentDriven: true,
-    },
-    typescript: {
-        strict: true,
-        shim: false,
-    },
     modules: [
         '@nuxt/content',
         '@nuxtjs/tailwindcss',
         '@formkit/nuxt',
         // '@nuxtjs/prismic',
+        //'@nuxt/kit',
         '@vueuse/nuxt',
         '@nuxtjs/supabase',
         '@nuxtjs/color-mode',
@@ -36,7 +14,7 @@ export default defineNuxtConfig({
         //'@nuxtjs/partytown',
         //'@inkline/nuxt',
         'nuxt-api-party',
-        'nuxt-umami',
+        //'nuxt-umami',
         '@sidebase/nuxt-session',
         '@pinia/nuxt',
         // '@nuxtjs/vuetify',
@@ -46,39 +24,24 @@ export default defineNuxtConfig({
         'nuxt-headlessui',
         '@dargmuesli/nuxt-cookie-control',
         '@nuxt/devtools',
-        '@tailvue/nuxt',
+        // 'nuxt-logrocket',
+        // 'nuxt-bugsnag',
+        //'@nuxtjs/i18n',
+        '@nuxtjs/eslint-module',
+        //'@nuxthq/ui',
+        'nuxt-gtag',
+        'nuxt-vercel-analytics',
+        'nuxt-disqus',
+        'nuxt-og-image',
+        'nuxt-simple-sitemap',
+        'nuxt-simple-robots',
+        'nuxt-link-checker',
+        //'nuxt-schema-org',
+        'nuxt-seo-experiments',
+        '@nuxt/image',
+        //'@nuxtus/nuxt-localtunnel',
     ],
-    extends: ['nuxt-seo-kit', '@nuxt-themes/docus'],
-    headlessui: {
-        prefix: 'Headless',
-    },
-    apiParty: {
-        name: 'restcountriesapi',
-    },
-    umami: {
-        autoTrack: true,
-        doNotTrack: false,
-        cache: false,
-        domains: 'selfhosting.ninja',
-        websiteId: '13c32209-6374-4c1d-a2d6-8fbb41c89e01',
-        scriptUrl: 'https://analytics.umami.is/script.js',
-    },
-    // image: {
-    //     domains: ['selfhosting.ninja'],
-    // },
-    swiper: {
-        // Swiper options
-        //----------------------
-        // prefix: 'Swiper',
-        // styleLang: 'css',
-        // modules: ['navigation', 'pagination'],
-    },
-    colorMode: {
-        classSuffix: '',
-        // preference: 'system',
-        fallback: 'light',
-        componentName: 'ColorScheme',
-    },
+
     runtimeConfig: {
         public: {
             SUPABASE_URL: process.env.SUPABASE_URL,
@@ -89,9 +52,92 @@ export default defineNuxtConfig({
                 'Selfhosting.ninja is a blog about selfhosting your own homelab, Home Assistant, Docker, Kubernetes and much more.',
             language: 'en-US',
             titleSeparator: '|',
-            trailingSlash: true,
+            trailingSlash: false,
         },
     },
+
+    //localtunnel: {},
+
+    disqus: {
+        shortname: 'selfhosting-tech',
+    },
+
+    gtag: {
+        id: 'G-J74M1SG3NQ',
+    },
+
+    eslint: {
+        emitWarning: false,
+        lintOnStart: false,
+        emitError: false,
+    },
+
+    ssr: false,
+
+    apiParty: {
+        endpoints: {
+            restCountriesApi: {
+                url: process.env.API_PARTY_BASE_URL!,
+            },
+        },
+    },
+
+    // i18n: {
+    //     vueI18n: './i18n.config.ts',
+    // },
+    // logRocket: {
+    //     id: '6boygm/selfhostingninja',
+    //     dev: false,
+    //     config: {},
+    // },
+
+    // bugsnag: {
+    //     publishRelease: true,
+    //     config: {
+    //         apiKey: process.env.BUGSNAG_APIKEY,
+    //         enabledReleaseStages: ['staging', 'production'],
+    //         releaseStage: process.env.NODE_ENV,
+    //         appVersion: '1.0',
+    //     },
+    // },
+    components: true,
+
+    content: {
+        documentDriven: true,
+    },
+
+    // devServerHandlers: [],
+    typescript: {
+        strict: true,
+        shim: false,
+    },
+
+    headlessui: {
+        prefix: 'Headless',
+    },
+
+    // umami: {
+    //     autoTrack: true,
+    //     doNotTrack: false,
+    //     cache: false,
+    //     domains: 'selfhosting.ninja',
+    //     websiteId: '13c32209-6374-4c1d-a2d6-8fbb41c89e01',
+    //     scriptUrl: 'https://analytics.umami.is/script.js',
+    // },
+    image: {
+        domains: ['selfhosting.ninja'],
+        cloudinary: {
+            baseURL: 'https://res.cloudinary.com/selfhostingninja/image/upload/v1679713729',
+        },
+    },
+
+    colorMode: {
+        classSuffix: '',
+        // preference: 'system',
+        fallback: 'light',
+        componentName: 'ColorScheme',
+    },
+
     // tailwindcss: {
     //     cssPath: '~/assets/css/tailwind.css',
     //     configPath: 'tailwind.config.js',
@@ -100,23 +146,37 @@ export default defineNuxtConfig({
     //     injectPosition: 0,
     //     viewer: true,
     // },
-    css: ['~/assets/css/main.css', 'vuetify/lib/styles/main.sass', '@mdi/font/css/materialdesignicons.min.css'],
-    postcss: {
-        plugins: {
-            'postcss-import': {},
-            'tailwindcss/nesting': 'postcss-nesting',
-            tailwindcss: {},
-            autoprefixer: {},
-        },
-    },
+    // css: ['~/assets/css/main.css', 'vuetify/lib/styles/main.sass', '@mdi/font/css/materialdesignicons.min.css'],
+    // postcss: {
+    //     plugins: {
+    //         'postcss-import': {},
+    //         'tailwindcss/nesting': 'postcss-nesting',
+    //         tailwindcss: {},
+    //         autoprefixer: {},
+    //     },
+    // },
+    css: [
+        'primevue/resources/themes/lara-light-blue/theme.css',
+        'primevue/resources/primevue.css',
+        'primeicons/primeicons.css',
+    ],
+
     build: {
-        transpile: ['vuetify', 'vueuc', '@css-render/vue3-ssr', '@juggle/resize-observer'],
+        transpile:
+            process.env.NODE_ENV === 'production'
+                ? [
+                      'naive-ui',
+                      'vueuc',
+                      '@css-render/vue3-ssr',
+                      '@juggle/resize-observer',
+                      'vuetify',
+                      'primevue',
+                      'vue-resizer',
+                      'asyncDataDefaults',
+                  ]
+                : ['@juggle/resize-observer', 'vuetify', 'primevue', 'vue-resizer', 'asyncDataDefaults'],
     },
-    nitro: {
-        prerender: {
-            routes: ['/sitemap.xml'],
-        },
-    },
+
     vite: {
         logLevel: 'info',
         optimizeDeps: {
@@ -128,8 +188,11 @@ export default defineNuxtConfig({
                 'ufo',
                 'naive-ui',
                 'vueuc',
-                'date-fns-tz/esm/formatInTimeZone',
             ],
         },
+    },
+
+    devtools: {
+        enabled: true,
     },
 })

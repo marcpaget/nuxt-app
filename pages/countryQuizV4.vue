@@ -3,21 +3,22 @@
         <span class="text-4xl text-sky-600 text-center mb-4 mt-4">Guess the capital</span>
 
         <div
-            class="bg-slate-300 dark:bg-slate-100 h-full mt-8 rounded-md justify-center self-center shadow-md shadow-slate-500 dark:shadow-slate-50 outline outline-1 box-border p-8 border-8"
+            class="bg-slate-300 dark:bg-slate-100 mt-8 rounded-md justify-center self-center shadow-md shadow-slate-500 dark:shadow-slate-50 outline outline-1 box-border p-8 border-8"
         >
             <section v-if="totalQuestions < 10">
                 <div class="min-w-max max-w-lg">
-                    <div>
-                        <p class="text-xl text-left text-sky-600 mb-4">Question</p>
-                        <p class="text-xl text-left text-sky-600 mb-4">{{ totalQuestions }} / 10</p>
+                    <progress
+                        class="mt-8 place-content-center progress progress-primary w-56"
+                        :value="totalQuestions"
+                        :max="10"
+                    />
+                    <span class="text-2xl text-gray-600 text-left mb-4">Question {{ totalQuestions }} / 10</span>
 
-                        <p class="text-xl text-right text-sky-600 mb-4">Score</p>
-                        <p class="text-xl text-right text-sky-600 mb-4">{{ score }} / {{ totalQuestions }}</p>
-                    </div>
+                    <span class="text-2xl text-gray-600 text-right mb-4">Score {{ score }} / {{ totalQuestions }}</span>
                 </div>
                 <!-- ! FIX: Add optional timer -->
                 <div class="justify-center self-center">
-                    <p class="text-5xl">{{ currentCountry }}</p>
+                    <p class="text-4xl text-sky-600 text-center">{{ currentCountry }}</p>
                 </div>
                 <div class="min-w-max max-w-lg flex flex-col rounded-md shadow-sm mt-4">
                     <!--   ! FIX: Add a button to start the quiz  -->
@@ -76,7 +77,7 @@ export default {
         return {
             countries: [],
             options: [],
-            currentCapital: '',
+            currentCountry: '',
             correctAnswer: '',
             score: 0,
             wrong: 0,
@@ -106,7 +107,7 @@ export default {
 
                 //copilot how do i change color of button to green if answer is correct and red if answer incorrect
 
-                const res = await useFetch('https://restcountries.com/v2/all', 'no-cors')
+                const res = await useRestCountriesApiData('v2/all/')
                 this.countries = res.data
                 this.getRandomCapital()
             } catch (error) {
@@ -122,15 +123,15 @@ export default {
         },
         getRandomCapital() {
             const randomIndex = Math.floor(Math.random() * this.countries.length)
-            this.currentCountry = this.countries[randomIndex].name
-            this.correctAnswer = this.countries[randomIndex].capital
+            this.currentCountry = this.countries[randomIndex].capital
+            this.correctAnswer = this.countries[randomIndex].name
             this.options = this.getRandomOptions(this.correctAnswer)
         },
         getRandomOptions(correctAnswer) {
             let options = [correctAnswer]
             while (options.length < 4) {
                 const randomIndex = Math.floor(Math.random() * this.countries.length)
-                const option = this.countries[randomIndex].capital
+                const option = this.countries[randomIndex].name
                 if (!options.includes(option)) {
                     options.push(option)
                 }

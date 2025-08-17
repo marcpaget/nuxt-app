@@ -13,4 +13,8 @@ dist
 .idea
 images/*
 !images/README.md
-.vercel.yarn/cache
+.vercel
+.yarn/cache
+netlify.toml
+# Sentry Auth Token
+.sentryclirc

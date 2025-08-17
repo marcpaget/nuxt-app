@@ -1,9 +1,12 @@
+// app.config.ts
 export default defineAppConfig({
-    docus: {
-        layout: {
-            fluid: false,
+    vercelAnalytics: {
+        mode: 'auto',
+        debug: true,
+        beforeSend: (event) => {
+            if (event.url.includes('/private')) return null
+
+            return event
         },
-        title: 'Selfhosting.ninja',
-        description: 'Hej',
     },
 })
