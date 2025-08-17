@@ -17,3 +17,4 @@ images/*
 netlify.toml
 # Sentry Auth Token
 .sentryclirc
+.yarn/cache
