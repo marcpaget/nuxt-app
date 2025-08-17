@@ -18,3 +18,4 @@ images/*
 netlify.toml
 # Sentry Auth Token
 .sentryclirc
+.DS_Store
